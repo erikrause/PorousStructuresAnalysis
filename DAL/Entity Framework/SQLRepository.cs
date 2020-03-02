@@ -1,4 +1,4 @@
-﻿using DAL.Entities;
+﻿using DAL.Entities.Abstract;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -50,7 +50,8 @@ namespace DAL.Entity_Framework
         }
         public async Task<IEnumerable<T>> GetBy<T>(Expression<Func<T, bool>> predicate) where T : Entity
         {
-            return await db.Set<T>().Where(predicate).ToListAsync();
+            var result = await db.Set<T>().Where (predicate).ToListAsync();
+            return result;
         }
     }
 }

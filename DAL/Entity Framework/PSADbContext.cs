@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data.Entity;
+using DAL.Entities.Abstract;
 using DAL.Entities;
 using System.IO;
 using System.Configuration;
@@ -15,6 +16,7 @@ namespace DAL.Entity_Framework
         {
             //var prob = ConfigurationManager.ConnectionStrings["DAL.Properties.Settings.DefaultConnection"].ConnectionString;
             //var prob2 = ConfigurationManager.ConnectionStrings[1];
+            var init = Set<Image>().SingleOrDefaultAsync(t => t.Id == 1);
         }
         public DbSet<C3DModel> C3DModel { get; set; }
         public DbSet<GeneratedImage> GeneratedImage { get; set; }

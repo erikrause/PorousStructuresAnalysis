@@ -1,5 +1,6 @@
 ﻿using BLL.Interfaces;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinFormsFramework
@@ -13,21 +14,22 @@ namespace WinFormsFramework
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            Service.NewGeneratedSample();
+            await Service.NewGeneratedSample();
         }
 
-        private void button_update_Click(object sender, EventArgs e)
+        private async void button_update_Click(object sender, EventArgs e)
         {
             //userBindingSource.DataSource = Service.GetUsers();
-            generatedSampleBindingSource.DataSource = Service.GetGeneratedSamples();
-        }
+            var data =  await Service.GetGeneratedSamples();
+            generatedSampleBindingSource.DataSource = data;
+        } 
 
-        private void button_delete_Click(object sender, EventArgs e)
+        private async void button_delete_Click(object sender, EventArgs e)
         {
             int id = (int)numericUpDown_id.Value;
-            Service.DeleteGeneratedSample(id);
+            await Service.DeleteGeneratedSample(id);
         }
     }
 }

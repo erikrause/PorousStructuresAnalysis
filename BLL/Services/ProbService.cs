@@ -17,11 +17,12 @@ namespace BLL.Services
         {
             repo = repository;
         }
-        public async Task<IEnumerable<User>> GetUsers()
+        /*
+        public IEnumerable<User> GetUsers()
         {
             //var date = new DateTime(DateTime.Now.Day - 0);
-            return await repo.GetBy<User>(t => t.Id > 0);
-        }
+            return repo.GetBy<User>(t => t.Id > 0);
+        }*/
         public async Task NewUser()
         {
             var p = new User()

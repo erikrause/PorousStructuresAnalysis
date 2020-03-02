@@ -8,10 +8,10 @@ namespace BLL.Interfaces
 {
     public interface IProbService
     {
-        Task<IEnumerable<User>> GetUsers();
+        //IEnumerable<User> GetUsers();
         Task NewUser();
 
-        Task<IEnumerable<GeneratedSample>> GetGeneratedSamples();
+        Task <IEnumerable<GeneratedSample>> GetGeneratedSamples();
         Task NewGeneratedSample();
 
         Task DeleteGeneratedSample(int id);

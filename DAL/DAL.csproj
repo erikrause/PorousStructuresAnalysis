@@ -53,14 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\C3DModel.cs" />
-    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Abstract\Entity.cs" />
     <Compile Include="Entities\GeneratedImage.cs" />
-    <Compile Include="Entities\GeneratedSample.cs" />
+    <Compile Include="Entities\Abstract\GeneratedSample.cs" />
     <Compile Include="Entities\GenerationNetwork.cs" />
-    <Compile Include="Entities\Image.cs" />
+    <Compile Include="Entities\Abstract\Image.cs" />
     <Compile Include="Entities\MicroCT.cs" />
-    <Compile Include="Entities\NeuralNetwork.cs" />
-    <Compile Include="Entities\PorousStructuresImage.cs" />
+    <Compile Include="Entities\Abstract\NeuralNetwork.cs" />
+    <Compile Include="Entities\Abstract\PorousStructuresImage.cs" />
     <Compile Include="Entities\SegmentationDataset.cs" />
     <Compile Include="Entities\SegmentationNetwork.cs" />
     <Compile Include="Entities\SegmentedImage.cs" />

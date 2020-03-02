@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DAL.Entities
+namespace DAL.Entities.Abstract
 {
     public class NeuralNetwork : Entity
     {

@@ -3,15 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ApiDomain.Interfaces
 {
     public interface IRepository
     {
-        T Get<T>(int id) where T : Entity;
-        void Save<T>(T entity) where T : Entity;
-        IEnumerable<T> GetAll<T>() where T : Entity;
-        void Remove<T>(T entity) where T : Entity;
-        IEnumerable<T> GetBy<T>(Expression<Func<T, bool>> predicate) where T : Entity;
+        Task<T> Get<T>(int id) where T : Entity;
+        Task Save<T>(T entity) where T : Entity;
+        Task<IEnumerable<T>> GetAll<T>() where T : Entity;
+        Task Remove<T>(T entity) where T : Entity;
+        Task<IEnumerable<T>> GetBy<T>(Expression<Func<T, bool>> predicate) where T : Entity;
     }
 }
