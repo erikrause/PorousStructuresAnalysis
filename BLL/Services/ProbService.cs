@@ -1,5 +1,6 @@
 ﻿using BLL.Interfaces;
 using DAL.Entities;
+using DAL.Entities.Abstract;
 using DAL.Entity_Framework;
 using DAL.Interfaces;
 using System;
@@ -28,7 +29,7 @@ namespace BLL.Services
             var p = new User()
             {
                 Login = "erikrause",
-                PasswordHash = "hello",
+                //PasswordHash = "hello",
                 RegistrationDate = DateTime.Now,
                 Role = "admin"
             };

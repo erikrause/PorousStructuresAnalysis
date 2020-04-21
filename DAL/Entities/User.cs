@@ -8,7 +8,7 @@ namespace DAL.Entities
     public class User : Entity
     {
         public string Login { get; set; }
-        public string PasswordHash { get; set; }
+        public byte[] PasswordHash { get; set; }
         public DateTime? RegistrationDate { get; set; }
         public DateTime? LastOnlineDate { get; set; }
         public string Role { get; set; }

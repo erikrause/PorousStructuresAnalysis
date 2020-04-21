@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace DAL.Entities.Abstract
+namespace DAL.Entities
 {
     [Table(nameof(GeneratedSample))]
     public class GeneratedSample : GeneratedImage

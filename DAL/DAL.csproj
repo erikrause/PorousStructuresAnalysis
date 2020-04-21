@@ -55,7 +55,7 @@
     <Compile Include="Entities\C3DModel.cs" />
     <Compile Include="Entities\Abstract\Entity.cs" />
     <Compile Include="Entities\GeneratedImage.cs" />
-    <Compile Include="Entities\Abstract\GeneratedSample.cs" />
+    <Compile Include="Entities\GeneratedSample.cs" />
     <Compile Include="Entities\GenerationNetwork.cs" />
     <Compile Include="Entities\Abstract\Image.cs" />
     <Compile Include="Entities\MicroCT.cs" />
