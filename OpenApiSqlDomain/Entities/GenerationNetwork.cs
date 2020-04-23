@@ -12,8 +12,17 @@ namespace OpenApiSqlDomain.Entities
     {
         public byte[] GeneratorModel { get; set; }
 
-        public List<GeneratedImage> GeneratedImage { get; set; }
-        public int MicroCTId { get; set; }
-        public MicroCT MicroCT { get; set; }
+        public virtual List<GeneratedImage> GeneratedImage { get; set; }
+        //public int MicroCTId { get; set; }
+        public virtual List<MicroCT> MicroCT { get; set; }
+        public string Type { get; set; }    // Example: CGAN, WGAN
+        public virtual List<ResolutionParameters> ResolutionsParameters { get; set; }
+        public string Optimizer { get; set; }   // Adam, RMSProp
+        public string WeightInitializer { get; set; }
+        public float ReLUAlpha { get; set; }
+        public int HiddenShape { get; set; }
+        public int CriticStep { get; set; }
+        public int SampleInterval { get; set; }
+
     }
 }

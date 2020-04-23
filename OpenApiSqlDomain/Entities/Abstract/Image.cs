@@ -10,8 +10,18 @@ namespace OpenApiSqlDomain.Entities.Abstract
     {
         public byte[] VoxelArray { get; set; }
         public double? Scale { get; set; }
-        public string Resolution { get; set; }
+        public int DimX { get; set; }
+        public int DimY { get; set; }
+        public int DimZ { get; set; }
+        //public string Resolution { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public List<C3DModel> C3DModels { get; set; }
+        /// <summary>
+        /// Полигоны песчинок горной породы
+        /// </summary>
+        public virtual PolygonalModel RockPolygonalModel { get; set; }      
+        /// <summary>
+        /// Полигоны пустот горной породы
+        /// </summary>
+        public virtual PolygonalModel PorousPolygonalModel { get; set; }       
     }
 }

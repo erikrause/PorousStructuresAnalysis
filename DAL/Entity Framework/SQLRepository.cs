@@ -53,5 +53,15 @@ namespace DAL.Entity_Framework
             var result = await db.Set<T>().Where (predicate).ToListAsync();
             return result;
         }
+
+        public async Task Update<T>(T entity)
+        {
+            db.Entry(entity).State = EntityState.Modified;
+            await db.SaveChangesAsync();
+        }
+        public void Dispose()     // Async?
+        {
+            db.Dispose();
+        }
     }
 }

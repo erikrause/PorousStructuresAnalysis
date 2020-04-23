@@ -22,7 +22,7 @@ namespace OpenApiSqlDomain.Entity_Framework
         {
             return await db.Set<T>().SingleOrDefaultAsync(t => t.Id == id);
         }
-        public async Task Save<T>(T entity) where T : Entity
+        public async Task Create<T>(T entity) where T : Entity
         {
             if (entity.Id < 1)
             {
@@ -42,7 +42,7 @@ namespace OpenApiSqlDomain.Entity_Framework
             var result = await db.Set<T>().OrderBy(t => t.Id).ToListAsync();
             return result.AsQueryable();    // спросить у егорова
         }
-        public async Task Remove<T>(T entity) where T : Entity
+        public async Task Delete<T>(T entity) where T : Entity
         {
             var cache = await db.Set<T>().FindAsync(entity.Id);    //Todo
             db.Set<T>().Remove(cache);
@@ -52,6 +52,16 @@ namespace OpenApiSqlDomain.Entity_Framework
         {
             var result = await db.Set<T>().Where (predicate).ToListAsync();
             return result;
+        }
+
+        public async Task Update<T>(T entity) where T : Entity
+        {
+            db.Entry(entity).State = EntityState.Modified;
+            await db.SaveChangesAsync();
+        }
+        public void Dispose()     // Async?
+        {
+            db.Dispose();
         }
     }
 }

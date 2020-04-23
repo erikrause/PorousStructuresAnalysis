@@ -14,7 +14,7 @@ namespace OpenApiSqlDomain.Entities
         public string Name { get; set; }
         public double? Depth { get; set; }
 
-        public List<GenerationNetwork> GenerationNetwork { get; set; }
+        public virtual List<GenerationNetwork> GenerationNetwork { get; set; }
 
         //public User User { get; set; }
     }

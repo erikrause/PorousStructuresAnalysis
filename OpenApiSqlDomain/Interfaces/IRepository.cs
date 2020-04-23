@@ -5,14 +5,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Interfaces
+namespace OpenApiSqlDomain.Interfaces
 {
-    public interface IRepository
+    public interface IRepository : IDisposable
     {
         Task<T> Get<T>(int id) where T : Entity;
-        Task Save<T>(T entity) where T : Entity;
+        Task Create<T>(T entity) where T : Entity;
         Task<IEnumerable<T>> GetAll<T>() where T : Entity;
-        Task Remove<T>(T entity) where T : Entity;
+        Task Delete<T>(int entityId) where T : Entity;
         Task<IEnumerable<T>> GetBy<T>(Expression<Func<T, bool>> predicate) where T : Entity;
+        Task Update<T>(T enity) where T : Entity;
     }
 }

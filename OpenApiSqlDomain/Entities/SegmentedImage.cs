@@ -13,6 +13,6 @@ namespace OpenApiSqlDomain.Entities
         public string Type { get; set; }
         public int SegmentationNetworkId { get; set; }
 
-        public SegmentationNetwork SegmentationNetwork { get; set; }
+        public virtual SegmentationNetwork SegmentationNetwork { get; set; }
     }
 }

@@ -13,8 +13,8 @@ namespace OpenApiSqlDomain.Entities
     {
         public int SegmentationDatasetId { get; set; }
 
-        public SegmentationDataset SegmentationDataset { get; set; }
+        public virtual SegmentationDataset SegmentationDataset { get; set; }
 
-        public List<SegmentedImage> SegmentedImage { get; set; }
+        public virtual List<SegmentedImage> SegmentedImage { get; set; }
     }
 }

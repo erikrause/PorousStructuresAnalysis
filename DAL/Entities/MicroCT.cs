@@ -13,7 +13,7 @@ namespace DAL.Entities
         public string Name { get; set; }
         public double? Depth { get; set; }
 
-        public List<GenerationNetwork> GenerationNetwork { get; set; }
+        public List<GenerationNetwork> GenerationNetwork { get; set; }      
         public int UserId { get; set; }
 
         public User User { get; set; }

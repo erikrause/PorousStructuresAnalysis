@@ -14,6 +14,6 @@ namespace DAL.Entities
 
         public List<GeneratedImage> GeneratedImage { get; set; }
         public int MicroCTId { get; set; }
-        public MicroCT MicroCT { get; set; }
+        public MicroCT MicroCT { get; set; }        // To list
     }
 }
