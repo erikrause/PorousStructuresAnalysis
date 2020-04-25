@@ -8,9 +8,10 @@ namespace OpenApiSqlDomain.Entities.Abstract
     public class NeuralNetwork : Entity
     {
         //public string InputScale { get; set; }  // TODO: сделать кортеж
-        public int InputScaleX { get; set; }
-        public int InputScaleY { get; set; }
-        public int InputScaleZ { get; set; }
+        public int ImageScaleX { get; set; }
+        public int ImageScaleY { get; set; }
+        public int ImageScaleZ { get; set; }
+        public int Channels { get; set; }
         public byte[] NetworkModel { get; set; }
         public DateTime? CreatedDate { get; set; }
         public bool? IsPrivate { get; set; }

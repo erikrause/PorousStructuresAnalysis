@@ -11,6 +11,6 @@ namespace OpenApiSqlDomain.Entities
         public int? PolygonsCount { get; set; }
         public int? VertexCount { get; set; }
         public int MicroCTId { get; set; }
-        public MicroCT MicroCT { get; set; }
+        public virtual MicroCT MicroCT { get; set; }
     }
 }

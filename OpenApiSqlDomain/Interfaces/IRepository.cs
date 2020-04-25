@@ -12,7 +12,7 @@ namespace OpenApiSqlDomain.Interfaces
         Task<T> Get<T>(int id) where T : Entity;
         Task Create<T>(T entity) where T : Entity;
         Task<IEnumerable<T>> GetAll<T>() where T : Entity;
-        Task Delete<T>(int entityId) where T : Entity;
+        Task Delete<T>(T entity) where T : Entity;
         Task<IEnumerable<T>> GetBy<T>(Expression<Func<T, bool>> predicate) where T : Entity;
         Task Update<T>(T enity) where T : Entity;
     }

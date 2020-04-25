@@ -21,7 +21,7 @@ namespace OpenApiSqlDomain.Entity_Framework
         public DbSet<PolygonalModel> C3DModel { get; set; }
         public DbSet<GeneratedImage> GeneratedImage { get; set; }
         public DbSet<GeneratedSample> GeneratedSample { get; set; }
-        public DbSet<GenerationNetwork> GenerationNetwork { get; set; }
+        public DbSet<PGGAN> GenerationNetwork { get; set; }
         public DbSet<Image> Image { get; set; }
         public DbSet<MicroCT> MicroCT { get; set; }
         public DbSet<NeuralNetwork> NeuralNetwork { get; set; }
@@ -29,6 +29,6 @@ namespace OpenApiSqlDomain.Entity_Framework
         public DbSet<SegmentationDataset> SegmentationDataset { get; set; }
         public DbSet<SegmentationNetwork> SegmentationNetwork { get; set; }
         public DbSet<SegmentedImage> SegmentedImage { get; set; }    
-        public DbSet<ResolutionParameters> ResolutionParameters { get; set; }
+        public DbSet<PGGANResolution> ResolutionParameters { get; set; }
     }
 }

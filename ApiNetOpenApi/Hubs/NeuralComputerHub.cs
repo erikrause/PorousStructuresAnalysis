@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.SignalR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ApiNetOpenApi.Hubs
 {
-    public class UsersHub : Hub
+    public class NeuralComputerHub
     {
-        public async Task
     }
 }

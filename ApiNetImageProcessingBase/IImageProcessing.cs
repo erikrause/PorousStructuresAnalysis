@@ -10,6 +10,7 @@ namespace ApiNetImageProcessingBase
         Task<Image> DeleteNoise(Image image);
         Task<Image> Binarize(Image image);
         Task GeneratePolygons(Image image);
-        //Task Compress(Image image);
+        
+        //Task Compress(Image image.);
     }
 }

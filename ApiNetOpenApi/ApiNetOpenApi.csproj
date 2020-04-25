@@ -6,7 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiNetMicroCTServiceBase\ApiNetMicroCTServiceBase.csproj" />
+    <ProjectReference Include="..\OpenApiSqlDomain\OpenApiSqlDomain.csproj" />
   </ItemGroup>
 
 

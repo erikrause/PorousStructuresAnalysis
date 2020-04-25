@@ -11,6 +11,6 @@ namespace OpenApiSqlDomain.Entities
     public class GeneratedImage : PorousStructuresImage
     {
         public int GenerationNetworkId { get; set; }
-        public virtual GenerationNetwork GenerationNetwork { get; set; }
+        public virtual PGGAN GenerationNetwork { get; set; }
     }
 }

@@ -10,9 +10,10 @@ namespace OpenApiSqlDomain.Entities
     [Table(nameof(GeneratedSample))]
     public class GeneratedSample : GeneratedImage
     {
-        public int? Iteration { get; set; }
+        public int Iteration { get; set; }
         public float? DiscriminatorAccuracy { get; set; }
-        public float? GeneratorLoss { get; set; }
-        public float? DiscriminatorLoss { get; set; }
+        public float GeneratorLoss { get; set; }
+        public float DiscriminatorLoss { get; set; }
+        public int  
     }
 }

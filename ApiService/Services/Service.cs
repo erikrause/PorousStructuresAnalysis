@@ -4,6 +4,7 @@ using ApiService.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ApiService.Services
 {
@@ -24,10 +25,15 @@ namespace ApiService.Services
                 DateCreated = DateTime.Now
             };
         }
-        public IEnumerable<Entity> GetAll()
+        public Task<IEnumerable<Entity>> GetAll()
         {
             //return repo.GetBy<User>(t => t.Id > 0);
             return Data.GetAll<Entity>();
+        }
+
+        IEnumerable<Entity> IService.GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }
