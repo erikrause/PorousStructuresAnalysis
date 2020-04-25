@@ -20,7 +20,7 @@ namespace OpenApiSqlDomain.Entities
         public int SampleInterval { get; set; }
         public int CurrentResolution { get; set; }
         public bool IsCurrentFadein { get; set; }
-        public virtual List<PGGANResolutionTraining> PGGANResolutionsTrainings { get; set; }
+        public virtual List<PGGANResolutionTraining> PGGANResolutionsTrainings { get; set; }    // TODO: Check database cycle! (with PGGAN entity.
         public TrainingStatus TrainingStatus { get; set; }
         public virtual List<GeneratedSample> GeneratedSamples { get; set; }
     }
