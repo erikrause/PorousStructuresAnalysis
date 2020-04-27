@@ -11,5 +11,6 @@ namespace ApiNetPGGANsTrainingServiceBase
     {
         Task Start(PGGANTraining pGGANTraining);
         Task Stop(PGGANTraining pGGANTraining);
+        Task Reset(PGGANTraining pGGANTraining);
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenApiSqlDomain.Entities
+namespace OpenApiSqlDomain.Entities.Enumerators
 {
     public enum NetworkType
     {

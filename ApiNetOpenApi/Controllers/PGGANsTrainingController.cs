@@ -2,45 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiNetPGGANsTrainingServiceBase;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OpenApiSqlDomain.Entities;
 
 namespace ApiNetOpenApi.Controllers
 {
-    [Route("api/PGGANs/[controller]")]
+    [Route("api/PGGANs/")]
     [ApiController]
     public class PGGANsTrainingController : ControllerBase
     {
-        // GET: api/Trainings
-        [HttpGet]
-        public Task<IEnumerable<PGGANTraining>> Get()
+        readonly IPGGANsTrainingService _pGGANsTrainingService;
+        [HttpGet("{pGGANId}/Training")] 
+        public PGGANTraining Get(int pGGANId)
         {
-            return new string[] { "value1", "value2" };
+            throw new NotImplementedException();
         }
 
-        // GET: api/Trainings/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Trainings
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Trainings/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        /// <summary>
+        /// Change training status.
+        /// </summary>
+        /// <param name="pGGANId"></param>
+        /// <param name="status"> "InProgress", "Stopped" </param>
+        [HttpPut("{pGGANId}/Training")]
+        public void Put(int pGGANId, [FromBody] string status)
         {
         }
     }

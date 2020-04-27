@@ -27,10 +27,15 @@ namespace ApiNetOpenApi.Hubs
             return base.OnConnectedAsync();
         }
 
-        public void NotifySampleUpdate(GeneratedSample sample)
+        public void NotifySampleUpdate(PGGANSample sample)
         {
             var connectionId = _connectionsMapping.GetConnections(sample.GenerationNetworkId).FirstOrDefault();
             Clients.Client(connectionId).SendAsync("SampleUpdate", sample);
+        }
+        public void NotifyTrainingUpdate(PGGANTraining pGGANTraining)
+        {
+            var connectionId = _connectionsMapping.GetConnections(pGGANTraining.Id).FirstOrDefault();
+            Clients.Client(connectionId).SendAsync("TrainingUpdate", pGGANTraining);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace OpenApiSqlDomain.Entities
     {
         public int SegmentationDatasetId { get; set; }
 
-        public virtual SegmentationDataset SegmentationDataset { get; set; }
+        public virtual List<SegmentationDataset> SegmentationDataset { get; set; } // TODO: check many to many relationship.
 
         public virtual List<SegmentedImage> SegmentedImage { get; set; }
     }

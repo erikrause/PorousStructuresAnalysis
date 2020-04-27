@@ -15,13 +15,6 @@ namespace OpenApiSqlDomain.Entities.Abstract
         public int DimZ { get; set; }
         //public string Resolution { get; set; }
         public DateTime? CreatedDate { get; set; }
-        /// <summary>
-        /// Полигоны песчинок горной породы
-        /// </summary>
-        public virtual PolygonalModel RockPolygonalModel { get; set; }      
-        /// <summary>
-        /// Полигоны пустот горной породы
-        /// </summary>
-        public virtual PolygonalModel PorousPolygonalModel { get; set; }       
+        public virtual PolygonalModel PolygonalModel { get; set; }      
     }
 }

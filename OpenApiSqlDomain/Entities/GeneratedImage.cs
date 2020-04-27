@@ -10,7 +10,12 @@ namespace OpenApiSqlDomain.Entities
     [Table(nameof(GeneratedImage))]
     public class GeneratedImage : PorousStructuresImage
     {
+        public bool isBinarized { get; set; }
         public int GenerationNetworkId { get; set; }
         public virtual PGGAN GenerationNetwork { get; set; }
+
+        public byte[] NoizeVector { get; set; }
+
+        public ControlVariables ControlVariables { get; set; }
     }
 }

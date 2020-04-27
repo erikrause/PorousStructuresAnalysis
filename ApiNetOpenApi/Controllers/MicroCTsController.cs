@@ -13,7 +13,7 @@ namespace ApiNetOpenApi.Controllers
     [ApiController]
     public class MicroCTsController : ControllerBase
     {
-        IMicroCTService MicroCTService;
+        readonly IMicroCTService _microCTService;
 
         // GET: api/MicroCT
         [HttpGet]
@@ -27,7 +27,7 @@ namespace ApiNetOpenApi.Controllers
         [HttpGet("{id}")]
         public async Task<MicroCT> Get(int id)
         {
-            return await MicroCTService.Get(id);
+            return await _microCTService.Get(id);
         }
 
         // POST: api/MicroCT

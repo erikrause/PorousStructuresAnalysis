@@ -3,14 +3,14 @@ using OpenApiSqlDomain.Entities.Abstract;
 using System;
 using System.Threading.Tasks;
 
-namespace ApiNetImageProcessingBase
+namespace ApiNetImageProcessingServiceBase
 {
-    public interface IImageProcessing
+    public interface IImageProcessingService
     {
         Task<Image> DeleteNoise(Image image);
         Task<Image> Binarize(Image image);
-        Task GeneratePolygons(Image image);
-        
+        //Task GeneratePolygons(Image image);
+
         //Task Compress(Image image.);
     }
 }

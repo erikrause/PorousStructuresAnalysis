@@ -18,17 +18,19 @@ namespace OpenApiSqlDomain.Entity_Framework
             //var prob2 = ConfigurationManager.ConnectionStrings[1];
             var init = Set<Image>().SingleOrDefaultAsync(t => t.Id == 1);
         }
-        public DbSet<PolygonalModel> C3DModel { get; set; }
-        public DbSet<GeneratedImage> GeneratedImage { get; set; }
-        public DbSet<GeneratedSample> GeneratedSample { get; set; }
-        public DbSet<PGGAN> GenerationNetwork { get; set; }
-        public DbSet<Image> Image { get; set; }
-        public DbSet<MicroCT> MicroCT { get; set; }
-        public DbSet<NeuralNetwork> NeuralNetwork { get; set; }
-        public DbSet<PorousStructuresImage> PorousStructuresImage { get; set; }
-        public DbSet<SegmentationDataset> SegmentationDataset { get; set; }
-        public DbSet<SegmentationNetwork> SegmentationNetwork { get; set; }
-        public DbSet<SegmentedImage> SegmentedImage { get; set; }    
+        public DbSet<PolygonalModel> C3DModels { get; set; }
+        public DbSet<GeneratedImage> GeneratedImages { get; set; }
+        public DbSet<PGGANSample> PGGANSamples { get; set; }
+        public DbSet<PGGAN> GenerationNetworks { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<MicroCT> MicroCTs { get; set; }
+        public DbSet<NeuralNetwork> NeuralNetworks { get; set; }
+        public DbSet<PorousStructuresImage> PorousStructuresImages { get; set; }
+        public DbSet<SegmentationDataset> SegmentationDatasets { get; set; }
+        public DbSet<SegmentationNetwork> SegmentationNetworks { get; set; }
+        public DbSet<SegmentedImage> SegmentedImages { get; set; }
         public DbSet<PGGANResolution> ResolutionParameters { get; set; }
+        public DbSet<PGGANTraining> PGGANTrainings { get; set; }
+        public DbSet<PGGANTrainingResolutionStatus> PGGANTrainingResolutionStatuses { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiNetGenerationImageServiceBase;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -10,41 +11,31 @@ using OpenApiSqlDomain.Entities;
 
 namespace ApiNetOpenApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/PGGANs/")]
     [ApiController]
     public class GenerationImagesController : ControllerBase
     {
-        // GET: api/GenerationImage
-        [HttpGet]
-        public IEnumerable<string> Get()
+        readonly IGenerationImageService _generationImageService;
+        [HttpGet("{pGGANId}/[controller]")]
+        public Task<IEnumerable<GeneratedImage>> Get(int pGGANId)
         {
-            return new string[] { "value1", "value2" };
+            throw new NotImplementedException();
         }
 
-        // GET: api/GenerationImage/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{pGGANId}/[controller]/{id}")]
+        public Task<GeneratedImage> Get(int pGGANId, int id)
         {
-            var prob = 
-            return "value";
+            throw new NotImplementedException();
         }
 
-        // POST: api/GenerationImage
-        [HttpPost]
-        public void Post([FromBody] PGGAN network)
+        [HttpPost("{pGGANId}/[controller]")]
+        public void Post(int pGGANId, [FromBody] ControlVariables controlVariables)
         {
-            //return 
+            throw new NotImplementedException();
         }
 
-        // PUT: api/GenerationImage/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{pGGANId}/[controller]/{id}")]
+        public void Delete(int pGGANId, int id)
         {
         }
     }

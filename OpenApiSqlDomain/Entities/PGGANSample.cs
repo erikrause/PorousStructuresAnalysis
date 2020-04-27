@@ -7,13 +7,14 @@ using System.Text;
 
 namespace OpenApiSqlDomain.Entities
 {
-    [Table(nameof(GeneratedSample))]
-    public class GeneratedSample : GeneratedImage
+    [Table(nameof(PGGANSample))]
+    public class PGGANSample : GeneratedImage
     {
         public int Iteration { get; set; }
         public float? DiscriminatorAccuracy { get; set; }
         public float GeneratorLoss { get; set; }
         public float DiscriminatorLoss { get; set; }
-        public int  
+        public int PGGANResolutionTrainingStatusId { get; set; }
+        public virtual PGGANTrainingResolutionStatus PGGANTrainingResolutionStatus { get; set; }
     }
 }

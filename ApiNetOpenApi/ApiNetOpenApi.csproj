@@ -11,7 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApiNetGenerationImageServiceBase\ApiNetGenerationImageServiceBase.csproj" />
     <ProjectReference Include="..\ApiNetMicroCTServiceBase\ApiNetMicroCTServiceBase.csproj" />
+    <ProjectReference Include="..\ApiNetPGGANResolutionServiceBase\ApiNetPGGANResolutionServiceBase.csproj" />
+    <ProjectReference Include="..\ApiNetPGGANSampleServiceBase\ApiNetPGGANSampleServiceBase.csproj" />
+    <ProjectReference Include="..\ApiNetPGGANServiceBase\ApiNetPGGANServiceBase.csproj" />
+    <ProjectReference Include="..\ApiNetPGGANsTrainingServiceBase\ApiNetPGGANsTrainingServiceBase.csproj" />
+    <ProjectReference Include="..\ApiNetPGGANTrainingResolutionStatus\ApiNetPGGANTrainingResolutionStatus.csproj" />
+    <ProjectReference Include="..\ApiNetPolygonalModelingServiceBase\ApiNetPolygonalModelingServiceBase.csproj" />
     <ProjectReference Include="..\OpenApiSqlDomain\OpenApiSqlDomain.csproj" />
   </ItemGroup>
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ApiNetGenerationNetworkServiceBase;
+using ApiNetPGGANServiceBase;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OpenApiSqlDomain.Entities;
@@ -13,20 +13,20 @@ namespace ApiNetOpenApi.Controllers
     [ApiController]
     public class PGGANsController : ControllerBase
     {
-        IGenerationService GenerationService;
+        readonly IPGGANsService _pGGANService;
 
         // GET: api/GenerationNetwork
         [HttpGet]
         public async Task<IEnumerable<PGGAN>> Get()
         {
-            return await GenerationService.GetAll();
+            return await _pGGANService.GetAll();
         }
 
         // GET: api/GenerationNetwork/5
         [HttpGet("{id}")]
         public async  Task<PGGAN> Get(int id)
         {
-            return await GenerationService.Get(id);
+            return await _pGGANService.Get(id);
         }
 
         // POST: api/GenerationNetwork
@@ -45,13 +45,6 @@ namespace ApiNetOpenApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-        }
-
-        [HttpPost]
-        [Route("{id}/Trainings")]
-        public void PostTraining(int networkId)
-        {
-
         }
     }
 }
