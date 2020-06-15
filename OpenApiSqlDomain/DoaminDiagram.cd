@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="OpenApiSqlDomain.Entities.Abstract.Entity">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Abstract\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.Abstract.Image">
+    <Position X="4.75" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAACAAAIAAAAAAAAAAAAAAgCwAAAAAAA=</HashCode>
+      <FileName>Entities\Abstract\Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.Abstract.NeuralNetwork">
+    <Position X="12.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABACAAAAAAAAAIAAgAAAAAEEAA=</HashCode>
+      <FileName>Entities\Abstract\NeuralNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.Abstract.PorousStructuresImage">
+    <Position X="6" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgEAAAAAAAAgIAAAAAAAAASAAAAAAAQAQIAAA=</HashCode>
+      <FileName>Entities\Abstract\PorousStructuresImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.ControlVariables">
+    <Position X="23" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAgEAEAAAAAAgIAAAAAAAAASAAAAAAQQQQIAAA=</HashCode>
+      <FileName>Entities\ControlVariables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.GeneratedImage">
+    <Position X="4.5" Y="9" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAAAAAAAAAAAAAAAACQEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\GeneratedImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.MicroCT">
+    <Position X="8" Y="9" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\MicroCT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.PGGAN">
+    <Position X="10" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIABkAAEAAAAIAAAAAAAAAAAIAAAACQAAIAUAAIA=</HashCode>
+      <FileName>Entities\PGGAN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.PGGANResolution">
+    <Position X="18.25" Y="2.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AwAABQAAAAgyAAUAAAAACgIAECAABEKAAAAAAAAEARA=</HashCode>
+      <FileName>Entities\PGGANResolution.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.PGGANSample">
+    <Position X="4" Y="11.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAFA=</HashCode>
+      <FileName>Entities\PGGANSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.PGGANTraining">
+    <Position X="0.75" Y="2.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PGGANTraining.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.PGGANTrainingResolutionStatus">
+    <Position X="9.25" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAIAAAAgAAAAAAAAAAAAAACAAAAAAACAA=</HashCode>
+      <FileName>Entities\PGGANTrainingResolutionStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.PolygonalModel">
+    <Position X="16" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAhAAwAAAAAAAEAA=</HashCode>
+      <FileName>Entities\PolygonalModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.SegmentationDataset">
+    <Position X="7.75" Y="11.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\SegmentationDataset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.SegmentationNetwork">
+    <Position X="14" Y="5.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Entities\SegmentationNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenApiSqlDomain.Entities.SegmentedImage">
+    <Position X="2" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\SegmentedImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="OpenApiSqlDomain.Entities.Enumerators.ConvolutionalActivation">
+    <Position X="26.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAACAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Enumerators\ConvolutionalActivation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenApiSqlDomain.Entities.Enumerators.GeneratorOutputActivation">
+    <Position X="26.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAAAA=</HashCode>
+      <FileName>Entities\Enumerators\GeneratorOutputActivation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenApiSqlDomain.Entities.Enumerators.NetworkType">
+    <Position X="26.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAkAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Enumerators\NetworkType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenApiSqlDomain.Entities.Enumerators.Optimizer">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>Entities\Enumerators\Optimizer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenApiSqlDomain.Entities.Enumerators.TrainingStatus">
+    <Position X="26.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIIAAAAEAAAAAACAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Entities\Enumerators\TrainingStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

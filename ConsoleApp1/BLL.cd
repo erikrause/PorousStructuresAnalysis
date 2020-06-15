@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Interface Name="ApiCRUDServiceBase.ICRUDService&lt;T&gt;">
+    <Position X="4.5" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEIAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>BLL\ICRUDService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetGenerationImageServiceBase.IGenerationImageService">
+    <Position X="0.5" Y="4.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAEAAAAA=</HashCode>
+      <FileName>BLL\IGenerationImageService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetImageProcessingServiceBase.IImageProcessingService">
+    <Position X="5" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IImageProcessingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetMicroCTServiceBase.IMicroCTService">
+    <Position X="10.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IMicroCTService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPGGANResolutionServiceBase.IPGGANResolutionService">
+    <Position X="0.5" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPGGANResolutionService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPGGANSampleServiceBase.IPGGANSampleService">
+    <Position X="6.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPGGANSampleService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPGGANServiceBase.IPGGANService">
+    <Position X="8.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPGGANsService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPGGANsTrainingServiceBase.IPGGANTrainingService">
+    <Position X="9.75" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPGGANsTrainingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPGGANTrainingResolutionStatus.IPGGANTrainingResolutionStatusService">
+    <Position X="3" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPGGANTrainingResolutionStatusService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPolygonalModelingServiceBase.IPolygonalModelingService">
+    <Position X="1" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPolygonalModelingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ApiNetPorousImageServiceBase.IPorousImageService">
+    <Position X="4.75" Y="6.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAACAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BLL\IPorousImageService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

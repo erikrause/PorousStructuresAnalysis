@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ApiNetOpenApi.Controllers.GenerationImagesController">
+    <Position X="7.5" Y="0.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Public interface\Controllers\GenerationImagesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.MicroCTsController">
+    <Position X="0.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAIAAAAAAAAg=</HashCode>
+      <FileName>Public interface\Controllers\MicroCTsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.PGGANsController">
+    <Position X="0.75" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Public interface\Controllers\PGGANsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.PGGANsResolutionsController">
+    <Position X="3.75" Y="3.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACEEAAAAAAgAAAAAAAAg=</HashCode>
+      <FileName>Public interface\Controllers\PGGANsResolutionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.PGGANsSamplesController">
+    <Position X="9.75" Y="6.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Public interface\Controllers\PGGANsSamplesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.PGGANsTrainingController">
+    <Position X="0.75" Y="6.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Public interface\Controllers\PGGANsTrainingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.PGGANsTrainingResolutionsStatusesController">
+    <Position X="4.5" Y="6.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Public interface\Controllers\PGGANsTrainingResolutionsStatusesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Controllers.PolygonalModelsController">
+    <Position X="3.5" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Public interface\Controllers\PolygonalModelsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Hubs.ClientsConnectionMapping&lt;T&gt;">
+    <Position X="5" Y="8.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABCQAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Public interface\Hubs\ClientsConnectionMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApiNetOpenApi.Hubs.ClientsHub">
+    <Position X="0.75" Y="8.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIBAAAAAAAAAAAAAEEAAAAAA=</HashCode>
+      <FileName>Public interface\Hubs\ClientsHub.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

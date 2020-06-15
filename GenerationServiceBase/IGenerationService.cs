@@ -1,13 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DAL.Entities;
+using OpenApiSqlDomain.Entities;
 
 namespace GenerationServiceBase
 {
     public interface IGenerationService
     {
+        Task<IEnumerable<GeneratedImage>> GetGeneratedImages(int generationNetworkId);
+        Task<IEnumerable<GeneratedImage>> GetGeneratedSamples(int generationNetworkId);
+        Task StartTrainNetwork(int generationNetworkId);
+        Task StopTrainNetwork(int generationNetworkId);
+        Task ResetTrainNetwork(int generationNetworkId);
+        Task<GeneratedImage> GenerateImage(int generationNetworkId, ControlVariables controlVariables);     // TODO: add postproccessing parameters
 
+
+        /*
         Task CreateNetworkModel(string inputScale, int layersCount);   // TODO: добавить атрибуты - размер слоев, размер ядра для каждого конв. слоя, начальные значения нейронов.
         // ИЛИ:
         Task CreateNetworkModel(GenerationNetwork generationNetwork);
@@ -22,6 +30,6 @@ namespace GenerationServiceBase
         Task<IEnumerable<GenerationNetwork>> GetNetworks(User user);
         Task TrainNetwork(int generationNetworkId);
         Task DeleteNetwork(int generationNetworkId);
-        Task<IEnumerable<GeneratedImage>> GetGeneratedImages(int generationNetworkId);
+        Task<IEnumerable<GeneratedImage>> GetGeneratedImages(int generationNetworkId);*/
     }
 }

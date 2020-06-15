@@ -10,10 +10,5 @@
     <PackageReference Include="Ninject" Version="3.3.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ApiDomain\ApiDomain.csproj" />
-    <ProjectReference Include="..\ApiService\ApiService.csproj" />
-  </ItemGroup>
-
 
 </Project>
