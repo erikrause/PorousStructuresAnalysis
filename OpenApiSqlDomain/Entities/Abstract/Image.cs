@@ -15,6 +15,7 @@ namespace OpenApiSqlDomain.Entities.Abstract
         public int DimZ { get; set; }
         //public string Resolution { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public virtual PolygonalModel PolygonalModel { get; set; }      
+        public virtual PolygonalModel PolygonalModel { get; set; }
+        public string VoxelArrayFormat { get; set; }
     }
 }

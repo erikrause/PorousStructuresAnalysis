@@ -6,6 +6,7 @@ using System.IO;
 using System.Configuration;
 using OpenApiSqlDomain.Entities;
 using OpenApiSqlDomain.Entities.Abstract;
+using System.Linq;
 
 namespace OpenApiSqlDomain.Entity_Framework
 {
@@ -16,7 +17,7 @@ namespace OpenApiSqlDomain.Entity_Framework
         {
             //var prob = ConfigurationManager.ConnectionStrings["DAL.Properties.Settings.DefaultConnection"].ConnectionString;
             //var prob2 = ConfigurationManager.ConnectionStrings[1];
-            var init = Set<Image>().SingleOrDefaultAsync(t => t.Id == 1);
+            var init = Set<Image>().SingleOrDefault(t => t.Id == 1);
         }
         public DbSet<PolygonalModel> PolygonalModels { get; set; }
         public DbSet<GeneratedImage> GeneratedImages { get; set; }

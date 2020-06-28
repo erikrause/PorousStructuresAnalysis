@@ -8,7 +8,7 @@ namespace ApiCRUDServiceBase
 {
     public interface ICRUDService<T> where T : Entity
     {
-        Task Create(T entity);
+        Task<int> Create(T entity);
         Task<T> Get(int id);
         Task<IEnumerable<T>> GetAll();
         Task<IEnumerable<T>> GetBy(Expression<Func<T, bool>> predicate);

@@ -2,6 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiNetGenerationImageServiceBase;
+using ApiNetGenerationImageServiceImplementation;
+using ApiNetPGGANServiceBase;
+using ApiNetPGGANServiceImpl;
+using ApiNetPolygonalModelingServiceBase;
+using ApiNetPolygonalModelingServiceImpl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +16,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using OpenApiSqlDomain.Entity_Framework;
+using OpenApiSqlDomain.Interfaces;
 
 namespace ApiNetOpenApi
 {
@@ -25,6 +33,11 @@ namespace ApiNetOpenApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IGenerationImageService, GenerationImageService>();
+            services.AddScoped<IPGGANService, PGGANService>();
+            services.AddScoped<IPolygonalModelingService, PolygonalModelingService>();
+            services.AddSingleton<IRepository>(repo => new SQLRepository("Diplom"));
+            //services.AddScoped<IGenerationImageService, GenerationImageService>();
             services.AddControllers();
             services.AddOpenApiDocument();
         }

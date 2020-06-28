@@ -1,8 +1,11 @@
-﻿using OpenApiSqlDomain.Entities.Abstract;
+﻿using OpenApiSqlDomain.Entities;
+using OpenApiSqlDomain.Entities.Abstract;
+using OpenApiSqlDomain.Entities.Enumerators;
 using OpenApiSqlDomain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -61,7 +64,7 @@ namespace OpenApiSqlDomain.Entity_Framework
         }
         public void Dispose()     // Async?
         {
-            db.Dispose();
+            //db.Dispose();     // Вызывает ошибку (диспозит db)
         }
     }
 }

@@ -17,19 +17,19 @@ namespace ApiNetOpenApi.Controllers
     {
         readonly IGenerationImageService _generationImageService;
         [HttpGet("{pGGANId}/[controller]")]
-        public Task<IEnumerable<GeneratedImageResponse>> Get(int pGGANId)
+        public Task<IEnumerable<GeneratedImageGetModel>> Get(int pGGANId)
         {
             throw new NotImplementedException();
         }
 
         [HttpGet("{pGGANId}/[controller]/{id}")]
-        public Task<GeneratedImageResponse> Get(int pGGANId, int id)
+        public Task<GeneratedImageGetModel> Get(int pGGANId, int id)
         {
             throw new NotImplementedException();
         }
 
         [HttpPost("{pGGANId}/[controller]")]
-        public void Post(int pGGANId, [FromBody] ControlVariablesRequest controlVariables)
+        public void Post(int pGGANId, [FromBody] ControlVariablesModel controlVariables)
         {
             throw new NotImplementedException();
         }

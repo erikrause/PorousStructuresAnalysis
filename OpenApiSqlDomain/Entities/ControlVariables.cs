@@ -11,7 +11,7 @@ namespace OpenApiSqlDomain.Entities
         [ForeignKey(nameof(Entities.GeneratedImage))]
         public override int Id { get; set; }
         public GeneratedImage GeneratedImage { get; set; }
-        public byte[] NoiseVector { get; set; }
+        public List<float> NoiseVector { get; set; }
         public double? Porosity { get; set; }
         public double? ElementsCount { get; set; }
         public double? MinElementSize { get; set; }
@@ -23,5 +23,6 @@ namespace OpenApiSqlDomain.Entities
         public double? Permeability { get; set; }
         public bool Binarisation { get; set; }
         public bool DeleteNoize { get; set; }
+        public int? Seed { get; set; } 
     }
 }
