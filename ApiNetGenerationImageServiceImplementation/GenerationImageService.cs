@@ -51,9 +51,9 @@ namespace ApiNetGenerationImageServiceImplementation
             return generatedImage;      // TODO: переделать в return id.
         }
 
-        public Task<GeneratedImage> Get(int id)
+        public async Task<GeneratedImage> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _repository.Get<GeneratedImage>(id);
         }
 
         public Task<IEnumerable<GeneratedImage>> GetAll()

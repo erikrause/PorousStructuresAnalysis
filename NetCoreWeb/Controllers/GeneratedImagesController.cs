@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreWeb.Models;
 using RockAnalysis;
+using System.IO;
 
 namespace NetCoreWeb.Controllers
 {
@@ -20,7 +21,10 @@ namespace NetCoreWeb.Controllers
         // GET: GeneratedImages/Details/5
         public async Task<ActionResult> Details(int id)
         {
-            return View();
+            GenerationImagesClient generationImagesClient = new GenerationImagesClient(new System.Net.Http.HttpClient());
+            GeneratedImageGetModel generatedImageGetModel = await generationImagesClient.GetAsync(1, id);
+
+            return View(generatedImageGetModel);
         }
 
         // GET: GeneratedImages/Create
@@ -36,6 +40,7 @@ namespace NetCoreWeb.Controllers
         {
             try
             {
+                generateImageRequest.Porosity = generateImageRequest.Porosity / 100;
                 //ControlVariables controlVariables = new ControlVariables(0, false, 0, 0, false, 0, null, 0, false, 0, 0, null, 0, 0.5, 0, 0);
                 ControlVariablesModel controlVariablesModel = new ControlVariablesModel
                 {
@@ -46,9 +51,14 @@ namespace NetCoreWeb.Controllers
                 GenerationImagesClient generationImagesClient = new GenerationImagesClient(new System.Net.Http.HttpClient());
                 GeneratedImageGetModel generatedImage =  await generationImagesClient.PostAsync(1, controlVariablesModel);
 
-                var stl_file = generatedImage.PolygonalModel.RockFaces;
+                var stl_file = Convert.FromBase64String(generatedImage.PolygonalModel.RockFaces);
 
-                return RedirectToAction(nameof(Index));
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string filePath = System.IO.Path.Combine(currentDirectory, "wwwroot", "js", "porous.stl");
+                System.IO.File.WriteAllBytes(filePath, stl_file);
+
+                //return RedirectToAction(nameof(Details), generatedImage.Id);
+                return RedirectToAction("Details", new { id = generatedImage.Id });
             }
             catch
             {

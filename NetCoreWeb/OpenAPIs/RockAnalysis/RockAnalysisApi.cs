@@ -3098,16 +3098,7 @@ namespace RockAnalysis
     public partial class PolygonalModelGetModel 
     {
         [Newtonsoft.Json.JsonProperty("rockFaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] RockFaces { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("rockVertexes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] RockVertexes { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("porousFaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] PorousFaces { get; set; }
-    
-        [Newtonsoft.Json.JsonProperty("porousVertexes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] PorousVertexes { get; set; }
+        public string RockFaces { get; set; }
     
     
     }

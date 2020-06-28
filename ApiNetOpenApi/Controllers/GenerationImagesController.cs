@@ -52,9 +52,16 @@ namespace ApiNetOpenApi.Controllers
         /// <param name="id"> Идентификатор изображения </param>
         /// <returns></returns>
         [HttpGet("{pGGANId}/[controller]/{id}")]
-        public Task<GeneratedImageGetModel> Get(int pGGANId, int id)
+        public async Task<GeneratedImageGetModel> Get(int pGGANId, int id)
         {
-            throw new NotImplementedException();
+            GeneratedImage generatedImage = await _generationImageService.Get(id);
+            GeneratedImageGetModel generatedImageGetModel = _mapper.Map<GeneratedImageGetModel>(generatedImage);
+            generatedImageGetModel.PolygonalModel = new PolygonalModelGetModel
+            {
+                RockFaces = Convert.ToBase64String(generatedImage.PolygonalModel.RockFaces)
+            };
+
+            return generatedImageGetModel;
         }
 
         /// <summary>
