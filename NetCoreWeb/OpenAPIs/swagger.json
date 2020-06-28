@@ -1,0 +1,2012 @@
+{
+  "x-generator": "NSwag v13.4.2.0 (NJsonSchema v10.1.11.0 (Newtonsoft.Json v11.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:44350"
+    }
+  ],
+  "paths": {
+    "/api/PGGANs/{pGGANId}/GenerationImages": {
+      "get": {
+        "tags": [
+          "GenerationImages"
+        ],
+        "summary": "Получить все изображения, сгенерированные нейронной сетью",
+        "operationId": "GenerationImages_GetAll",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "description": "Идентификатор нейронной сети ",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Сгенерированное изображение пористой среды ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GeneratedImageGetModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GenerationImages"
+        ],
+        "summary": "Сгенерировать изображение",
+        "operationId": "GenerationImages_Post",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "description": "Идентификатор нейронной сети ",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "controlVariablesModel",
+          "description": "Контрольные значения изображения ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ControlVariablesModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneratedImageGetModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/GenerationImages/{id}": {
+      "get": {
+        "tags": [
+          "GenerationImages"
+        ],
+        "summary": "Получить сгенерированное изображение.",
+        "operationId": "GenerationImages_Get",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "description": "Идентификатор нейронной сети ",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Идентификатор изображения ",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Сгенерированное изображение пористой среды ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneratedImageGetModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GenerationImages"
+        ],
+        "operationId": "GenerationImages_Delete",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/MicroCTs": {
+      "get": {
+        "tags": [
+          "MicroCTs"
+        ],
+        "operationId": "MicroCTs_GetAll",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MicroCT"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "MicroCTs"
+        ],
+        "operationId": "MicroCTs_Post",
+        "requestBody": {
+          "x-name": "microCT",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MicroCT"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/MicroCTs/{id}": {
+      "get": {
+        "tags": [
+          "MicroCTs"
+        ],
+        "operationId": "MicroCTs_Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MicroCT"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "MicroCTs"
+        ],
+        "operationId": "MicroCTs_Put",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "microCT",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MicroCT"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "MicroCTs"
+        ],
+        "operationId": "MicroCTs_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/PGGANs": {
+      "get": {
+        "tags": [
+          "PGGANs"
+        ],
+        "operationId": "PGGANs_GetAll",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PGGAN"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PGGANs"
+        ],
+        "operationId": "PGGANs_Post",
+        "requestBody": {
+          "x-name": "network",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PGGANPostModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{id}": {
+      "get": {
+        "tags": [
+          "PGGANs"
+        ],
+        "operationId": "PGGANs_Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PGGAN"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PGGANs"
+        ],
+        "operationId": "PGGANs_Put",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "network",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PGGANPostModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PGGANs"
+        ],
+        "operationId": "PGGANs_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{id}/cached": {
+      "put": {
+        "tags": [
+          "PGGANs"
+        ],
+        "operationId": "PGGANs_PutCache",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "cached",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Resolutions/{id}": {
+      "get": {
+        "tags": [
+          "PGGANsResolutions"
+        ],
+        "operationId": "PGGANsResolutions_Get",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PGGANResolution"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PGGANsResolutions"
+        ],
+        "operationId": "PGGANsResolutions_Put",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "x-name": "pGGANResolution",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PGGANResolution"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Resolutions": {
+      "get": {
+        "tags": [
+          "PGGANsResolutions"
+        ],
+        "operationId": "PGGANsResolutions_GetAll",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PGGANResolution"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PGGANsResolutions"
+        ],
+        "operationId": "PGGANsResolutions_Post",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "pGGANResolution",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PGGANResolution"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PGGANsResolutions"
+        ],
+        "summary": "Удаляет последний слой.",
+        "operationId": "PGGANsResolutions_Delete",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Training/ResolutionsStatuses/{resolutionStatusId}/Samples": {
+      "get": {
+        "tags": [
+          "PGGANsSamples"
+        ],
+        "operationId": "PGGANsSamples_GetAll",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "resolutionStatusId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PGGANSample"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Training/ResolutionsStatuses/{resolutionStatusId}/Samples/{id}": {
+      "get": {
+        "tags": [
+          "PGGANsSamples"
+        ],
+        "operationId": "PGGANsSamples_Get",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "resolutionStatusId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PGGANSample"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Training": {
+      "get": {
+        "tags": [
+          "PGGANsTraining"
+        ],
+        "operationId": "PGGANsTraining_Get",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PGGANTraining"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PGGANsTraining"
+        ],
+        "summary": "Change training status.",
+        "operationId": "PGGANsTraining_Put",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "status",
+          "description": "\"InProgress\", \"Stopped\" ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PGGANTraining"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Training/ResolutionsStatuses/{id}": {
+      "get": {
+        "tags": [
+          "PGGANsTrainingResolutionsStatuses"
+        ],
+        "operationId": "PGGANsTrainingResolutionsStatuses_Get",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PGGANTrainingResolutionStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PGGANs/{pGGANId}/Training/ResolutionsStatuses": {
+      "get": {
+        "tags": [
+          "PGGANsTrainingResolutionsStatuses"
+        ],
+        "operationId": "PGGANsTrainingResolutionsStatuses_GetAll",
+        "parameters": [
+          {
+            "name": "pGGANId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PGGANTrainingResolutionStatus"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Images/{imageId}/PolygonalModel": {
+      "post": {
+        "tags": [
+          "PolygonalModels"
+        ],
+        "summary": "Сгенерировать трехмерную полигональную модель на основе вокселей",
+        "operationId": "PolygonalModels_Post",
+        "parameters": [
+          {
+            "name": "imageId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PolygonalModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GeneratedImageGetModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PorousStructuresImageGetModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "isBinarized": {
+                "type": "boolean"
+              },
+              "generationNetworkId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "noizeVector": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "type": "number",
+                  "format": "float"
+                }
+              },
+              "controlVariables": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ControlVariablesModel"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ControlVariablesModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "seed": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "noiseVector": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          "porosity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "elementsCount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "minElementSize": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maxElementSize": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "avgElementSize": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cohesion": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "cavernsVolume": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "chanelsVolume": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "permeability": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "binarisation": {
+            "type": "boolean"
+          },
+          "deleteNoize": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PorousStructuresImageGetModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ImageGetModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "porosity": {
+                "type": "number",
+                "format": "double"
+              },
+              "elementsCount": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "minElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "maxElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "avgElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "сohesion": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "cavernsVolume": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "chanelsVolume": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "permeability": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ImageGetModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/EntityGetModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "voxelArray": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "scale": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "dimX": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dimY": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dimZ": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "createdDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "voxelArrayFormat": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "EntityGetModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "MicroCT": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PorousStructuresImage"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "nullable": true
+              },
+              "depth": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "generationNetwork": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/PGGAN"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PGGAN": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NeuralNetwork"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "generatedImages": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/GeneratedImage"
+                }
+              },
+              "microCT": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/MicroCT"
+                  }
+                ]
+              },
+              "type": {
+                "$ref": "#/components/schemas/NetworkType"
+              },
+              "optimizer": {
+                "$ref": "#/components/schemas/Optimizer"
+              },
+              "weightInitializer": {
+                "type": "string",
+                "nullable": true
+              },
+              "generatorOutputActivation": {
+                "$ref": "#/components/schemas/GeneratorOutputActivation"
+              },
+              "convolutionalActivations": {
+                "$ref": "#/components/schemas/ConvolutionalActivation"
+              },
+              "reLUAlpha": {
+                "type": "number",
+                "format": "float",
+                "nullable": true
+              },
+              "hiddenShape": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "criticSteps": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "cashed": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "GeneratedImage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PorousStructuresImage"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "isBinarized": {
+                "type": "boolean"
+              },
+              "generationNetworkId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "generationNetwork": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGAN"
+                  }
+                ]
+              },
+              "noizeVector": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "controlVariables": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ControlVariables"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ControlVariables": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "generatedImage": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/GeneratedImage"
+                  }
+                ]
+              },
+              "noiseVector": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "type": "number",
+                  "format": "float"
+                }
+              },
+              "porosity": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "elementsCount": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "minElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "maxElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "avgElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "сohesion": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "cavernsVolume": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "chanelsVolume": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "permeability": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "binarisation": {
+                "type": "boolean"
+              },
+              "deleteNoize": {
+                "type": "boolean"
+              },
+              "seed": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "Entity": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PorousStructuresImage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Image"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "porosity": {
+                "type": "number",
+                "format": "double"
+              },
+              "elementsCount": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "minElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "maxElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "avgElementSize": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "сohesion": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "cavernsVolume": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "chanelsVolume": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "permeability": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "Image": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "voxelArray": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "scale": {
+                "type": "number",
+                "format": "double",
+                "nullable": true
+              },
+              "dimX": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dimY": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dimZ": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "createdDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "polygonalModel": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PolygonalModel"
+                  }
+                ]
+              },
+              "voxelArrayFormat": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "PolygonalModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "rockFaces": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "rockVertexes": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "porousFaces": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "porousVertexes": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "image": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Image"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "NetworkType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "GAN",
+          "CGAN",
+          "WGAN",
+          "CWGAN"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "Optimizer": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Adam",
+          "RMSProp",
+          "Adagrad"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "GeneratorOutputActivation": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Tanh",
+          "Sigmoid"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "ConvolutionalActivation": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "ReLU",
+          "LeakyReLU",
+          "Softmax",
+          "ELU"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "NeuralNetwork": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "imageScaleX": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "imageScaleY": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "imageScaleZ": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "channels": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "networkModel": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "createdDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "PGGANPostModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NeuralNetworkPostModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "microCTId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "type": {
+                "$ref": "#/components/schemas/NetworkType"
+              },
+              "optimizer": {
+                "$ref": "#/components/schemas/Optimizer"
+              },
+              "weightInitializer": {
+                "type": "string",
+                "nullable": true
+              },
+              "generatorOutputActivation": {
+                "$ref": "#/components/schemas/GeneratorOutputActivation"
+              },
+              "convolutionalActivations": {
+                "$ref": "#/components/schemas/ConvolutionalActivation"
+              },
+              "reLUAlpha": {
+                "type": "number",
+                "format": "float",
+                "nullable": true
+              },
+              "hiddenShape": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "criticSteps": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "cashed": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      },
+      "NeuralNetworkPostModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/EntityPostModel"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "imageScaleX": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "imageScaleY": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "imageScaleZ": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "channels": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "networkModel": {
+                "type": "string",
+                "description": "Base64 string format for data",
+                "nullable": true
+              },
+              "createdDate": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "EntityPostModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PGGANResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "generatorWeights": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "discriminatorWeights": {
+                "type": "string",
+                "format": "byte",
+                "nullable": true
+              },
+              "imageScaleX": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "imageScaleY": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "imageScaleZ": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "filtersCount": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "filtersSize": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "filtersStride": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "filtersPadding": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "iterations": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "batchSize": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "learningRateStart": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "learningRateEnd": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "learningRateDecay": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fadeinUpsampleIterations": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fadeinBatchSize": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fadeinLearningRateStart": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fadeinLearningRateEnd": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fadeinLearningRateDecay": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "generationNetworkId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "generationNetwork": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGAN"
+                  }
+                ]
+              },
+              "pgganTrainingResolutionStatus": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGANTrainingResolutionStatus"
+                  }
+                ]
+              },
+              "sampleInterval": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "PGGANTrainingResolutionStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "pgganResolution": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGANResolution"
+                  }
+                ]
+              },
+              "iterationsPassed": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "fadeinUpsampleIterationsPassed": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "pgganTraining": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGANTraining"
+                  }
+                ]
+              },
+              "pgganSample": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/PGGANSample"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PGGANTraining": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "pggan": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGAN"
+                  }
+                ]
+              },
+              "pgganTrainingResolutionsStatuses": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/PGGANTrainingResolutionStatus"
+                }
+              },
+              "trainingStatus": {
+                "$ref": "#/components/schemas/TrainingStatus"
+              }
+            }
+          }
+        ]
+      },
+      "TrainingStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "InProgress",
+          "Stopped",
+          "LossIncreaseError",
+          "LossConstantError",
+          "LossZeroError"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "PGGANSample": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GeneratedImage"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "iteration": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "discriminatorAccuracy": {
+                "type": "number",
+                "format": "float",
+                "nullable": true
+              },
+              "generatorLoss": {
+                "type": "number",
+                "format": "float"
+              },
+              "discriminatorLoss": {
+                "type": "number",
+                "format": "float"
+              },
+              "pgganResolutionTrainingStatusId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "pgganTrainingResolutionStatus": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/PGGANTrainingResolutionStatus"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

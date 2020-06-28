@@ -12,7 +12,7 @@ namespace ApiNetOpenApi.Models.Get.Abstract
         public int DimY { get; set; }
         public int DimZ { get; set; }
         public DateTime? CreatedDate { get; set; }
-        //public virtual PolygonalModel PolygonalModel { get; set; }
+        public virtual PolygonalModelGetModel PolygonalModel { get; set; }
         public string VoxelArrayFormat { get; set; }
     }
 }

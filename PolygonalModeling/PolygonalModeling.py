@@ -17,14 +17,11 @@ def predict_slice():
     image = converting.convert_from_raw(image_raw)
     stl = marching_cubes.compute_mesh(image[:,:,:,0], 0)
 
-    prob = b''
+    stl.save("prob.stl")
 
-    stl.save(prob, "STL")
+    stl_binary = open("prob.stl", "rb")     # TODO: refactoring!
 
-    stl_stream = io.BytesIO()
-    stl.save(stl_stream)
-
-    response = flask.send_file(stl_stream, attachment_filename="volume.stl", as_attachment=True)
+    response = flask.send_file(stl_binary, attachment_filename="volume.stl", as_attachment=True)
 
     return response
 

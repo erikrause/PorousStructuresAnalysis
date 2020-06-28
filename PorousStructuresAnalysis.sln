@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiNetPolygonalModelingServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrameworkWeb", "NetFrameworkWeb\NetFrameworkWeb.csproj", "{5D587625-BE6E-4FD5-BA23-B52C3D6211CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreWeb", "NetCoreWeb\NetCoreWeb.csproj", "{37B00FAB-E1E1-4130-82A8-7CAB8A5A0DF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{5D587625-BE6E-4FD5-BA23-B52C3D6211CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D587625-BE6E-4FD5-BA23-B52C3D6211CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D587625-BE6E-4FD5-BA23-B52C3D6211CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B00FAB-E1E1-4130-82A8-7CAB8A5A0DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B00FAB-E1E1-4130-82A8-7CAB8A5A0DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B00FAB-E1E1-4130-82A8-7CAB8A5A0DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B00FAB-E1E1-4130-82A8-7CAB8A5A0DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +210,7 @@ Global
 		{3882FBAB-4B00-40A6-A416-65717DE9D2CB} = {7899C939-75B0-44E1-8B68-D24F64F1DF91}
 		{5A6E1CCC-0AB4-4C42-810B-FFD30AD1A99C} = {7899C939-75B0-44E1-8B68-D24F64F1DF91}
 		{5D587625-BE6E-4FD5-BA23-B52C3D6211CA} = {CE7CBA4B-5724-48CF-9C81-782DE2936879}
+		{37B00FAB-E1E1-4130-82A8-7CAB8A5A0DF1} = {CE7CBA4B-5724-48CF-9C81-782DE2936879}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {388BE47D-B5BA-4439-858F-58B1F370E0DE}

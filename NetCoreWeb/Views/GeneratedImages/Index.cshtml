@@ -1,0 +1,143 @@
+﻿@model IEnumerable<RockAnalysis.GeneratedImageGetModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IsBinarized)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GenerationNetworkId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Porosity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElementsCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinElementSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxElementSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgElementSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Сohesion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CavernsVolume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChanelsVolume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Permeability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VoxelArray)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DimX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DimY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DimZ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VoxelArrayFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsBinarized)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GenerationNetworkId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Porosity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElementsCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinElementSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxElementSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgElementSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Сohesion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CavernsVolume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChanelsVolume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Permeability)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoxelArray)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DimX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DimY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DimZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoxelArrayFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

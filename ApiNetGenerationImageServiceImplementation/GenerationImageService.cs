@@ -48,7 +48,7 @@ namespace ApiNetGenerationImageServiceImplementation
             await _polygonalModelingService.ComputePolygons(generatedImage);
             await _repository.Create(generatedImage);
 
-            return generatedImage;
+            return generatedImage;      // TODO: переделать в return id.
         }
 
         public Task<GeneratedImage> Get(int id)
