@@ -27,7 +27,7 @@ namespace ApiNetOpenApi.Controllers
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<GeneratedImagePostModel, GeneratedImage>().ReverseMap();
-                cfg.CreateMap<GeneratedImageGetModel, GeneratedImage>().ReverseMap();
+                cfg.CreateMap<GeneratedImage, GeneratedImageGetModel>().ForMember(x => x.PolygonalModel, opt => opt.Ignore()).ReverseMap();
                 cfg.CreateMap<ControlVariables, ControlVariablesModel>().ReverseMap();
             });
             
@@ -83,10 +83,14 @@ namespace ApiNetOpenApi.Controllers
                 Seed = controlVariablesModel.Seed
             };*/
             ControlVariables controlVariables = _mapper.Map<ControlVariables>(controlVariablesModel);
-            GeneratedImage result = await _generationImageService.Generate(pGGANId, controlVariables);
-            
+            GeneratedImage generatedImage = await _generationImageService.Generate(pGGANId, controlVariables);
 
-            GeneratedImageGetModel response = _mapper.Map<GeneratedImageGetModel>(result);
+
+            GeneratedImageGetModel response = _mapper.Map<GeneratedImageGetModel>(generatedImage);
+            response.PolygonalModel = new PolygonalModelGetModel
+            {
+                RockFaces = Convert.ToBase64String(generatedImage.PolygonalModel.RockFaces)
+            };
             /*
             var result = new GeneratedImageGetModel
             {

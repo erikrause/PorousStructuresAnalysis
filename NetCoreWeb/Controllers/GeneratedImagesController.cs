@@ -37,13 +37,16 @@ namespace NetCoreWeb.Controllers
             try
             {
                 //ControlVariables controlVariables = new ControlVariables(0, false, 0, 0, false, 0, null, 0, false, 0, 0, null, 0, 0.5, 0, 0);
-                ControlVariablesModel controlVariablesModel = 
-                    new ControlVariablesModel(0, false, 0, 0, 0, false, 0, 0, 0, null, 0, generateImageRequest.Porosity, generateImageRequest.Seed);
+                ControlVariablesModel controlVariablesModel = new ControlVariablesModel
+                {
+                    Seed = generateImageRequest.Seed,
+                    Porosity = generateImageRequest.Porosity
+                };
 
                 GenerationImagesClient generationImagesClient = new GenerationImagesClient(new System.Net.Http.HttpClient());
                 GeneratedImageGetModel generatedImage =  await generationImagesClient.PostAsync(1, controlVariablesModel);
 
-                var stl_file = generatedImage.P
+                var stl_file = generatedImage.PolygonalModel.RockFaces;
 
                 return RedirectToAction(nameof(Index));
             }

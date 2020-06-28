@@ -2971,27 +2971,17 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class GeneratedImageGetModel : PorousStructuresImageGetModel
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public GeneratedImageGetModel(double? @avgElementSize, double? @cavernsVolume, double? @chanelsVolume, ControlVariablesModel @controlVariables, System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, int? @elementsCount, int @generationNetworkId, int @id, bool @isBinarized, double? @maxElementSize, double? @minElementSize, System.Collections.Generic.ICollection<float> @noizeVector, double? @permeability, double @porosity, double? @scale, byte[] @voxelArray, string @voxelArrayFormat, double? @сohesion)
-            : base(avgElementSize, cavernsVolume, chanelsVolume, createdDate, dimX, dimY, dimZ, elementsCount, id, maxElementSize, minElementSize, permeability, porosity, scale, voxelArray, voxelArrayFormat, сohesion)
-        {
-            this.IsBinarized = @isBinarized;
-            this.GenerationNetworkId = @generationNetworkId;
-            this.NoizeVector = @noizeVector;
-            this.ControlVariables = @controlVariables;
-        }
-    
         [Newtonsoft.Json.JsonProperty("isBinarized", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool IsBinarized { get; }
+        public bool IsBinarized { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generationNetworkId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int GenerationNetworkId { get; }
+        public int GenerationNetworkId { get; set; }
     
         [Newtonsoft.Json.JsonProperty("noizeVector", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<float> NoizeVector { get; }
+        public System.Collections.Generic.ICollection<float> NoizeVector { get; set; }
     
         [Newtonsoft.Json.JsonProperty("controlVariables", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ControlVariablesModel ControlVariables { get; }
+        public ControlVariablesModel ControlVariables { get; set; }
     
     
     }
@@ -2999,66 +2989,44 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class ControlVariablesModel 
     {
-        public ControlVariablesModel()
-        {
-
-        }
-        [Newtonsoft.Json.JsonConstructor]
-        public ControlVariablesModel(double? @avgElementSize, bool @binarisation, double? @cavernsVolume, double? @chanelsVolume, double? @cohesion, bool @deleteNoize, double? @elementsCount, double? @maxElementSize, double? @minElementSize, System.Collections.Generic.ICollection<float> @noiseVector, double? @permeability, double? @porosity, int? @seed)
-        {
-            this.Seed = @seed;
-            this.NoiseVector = @noiseVector;
-            this.Porosity = @porosity;
-            this.ElementsCount = @elementsCount;
-            this.MinElementSize = @minElementSize;
-            this.MaxElementSize = @maxElementSize;
-            this.AvgElementSize = @avgElementSize;
-            this.Cohesion = @cohesion;
-            this.CavernsVolume = @cavernsVolume;
-            this.ChanelsVolume = @chanelsVolume;
-            this.Permeability = @permeability;
-            this.Binarisation = @binarisation;
-            this.DeleteNoize = @deleteNoize;
-        }
-    
         [Newtonsoft.Json.JsonProperty("seed", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Seed { get; }
+        public int? Seed { get; set; }
     
         [Newtonsoft.Json.JsonProperty("noiseVector", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<float> NoiseVector { get; }
+        public System.Collections.Generic.ICollection<float> NoiseVector { get; set; }
     
         [Newtonsoft.Json.JsonProperty("porosity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Porosity { get; }
+        public double? Porosity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("elementsCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? ElementsCount { get; }
+        public double? ElementsCount { get; set; }
     
         [Newtonsoft.Json.JsonProperty("minElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MinElementSize { get; }
+        public double? MinElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("maxElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MaxElementSize { get; }
+        public double? MaxElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("avgElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? AvgElementSize { get; }
+        public double? AvgElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cohesion", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Cohesion { get; }
+        public double? Cohesion { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cavernsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? CavernsVolume { get; }
+        public double? CavernsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("chanelsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? ChanelsVolume { get; }
+        public double? ChanelsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("permeability", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Permeability { get; }
+        public double? Permeability { get; set; }
     
         [Newtonsoft.Json.JsonProperty("binarisation", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Binarisation { get; }
+        public bool Binarisation { get; set; }
     
         [Newtonsoft.Json.JsonProperty("deleteNoize", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool DeleteNoize { get; }
+        public bool DeleteNoize { get; set; }
     
     
     }
@@ -3066,47 +3034,32 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PorousStructuresImageGetModel : ImageGetModel
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PorousStructuresImageGetModel(double? @avgElementSize, double? @cavernsVolume, double? @chanelsVolume, System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, int? @elementsCount, int @id, double? @maxElementSize, double? @minElementSize, double? @permeability, double @porosity, double? @scale, byte[] @voxelArray, string @voxelArrayFormat, double? @сohesion)
-            : base(createdDate, dimX, dimY, dimZ, id, scale, voxelArray, voxelArrayFormat)
-        {
-            this.Porosity = @porosity;
-            this.ElementsCount = @elementsCount;
-            this.MinElementSize = @minElementSize;
-            this.MaxElementSize = @maxElementSize;
-            this.AvgElementSize = @avgElementSize;
-            this.Сohesion = @сohesion;
-            this.CavernsVolume = @cavernsVolume;
-            this.ChanelsVolume = @chanelsVolume;
-            this.Permeability = @permeability;
-        }
-    
         [Newtonsoft.Json.JsonProperty("porosity", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double Porosity { get; }
+        public double Porosity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("elementsCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? ElementsCount { get; }
+        public int? ElementsCount { get; set; }
     
         [Newtonsoft.Json.JsonProperty("minElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MinElementSize { get; }
+        public double? MinElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("maxElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MaxElementSize { get; }
+        public double? MaxElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("avgElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? AvgElementSize { get; }
+        public double? AvgElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("сohesion", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Сohesion { get; }
+        public double? Сohesion { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cavernsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? CavernsVolume { get; }
+        public double? CavernsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("chanelsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? ChanelsVolume { get; }
+        public double? ChanelsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("permeability", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Permeability { get; }
+        public double? Permeability { get; set; }
     
     
     }
@@ -3114,39 +3067,47 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class ImageGetModel : EntityGetModel
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public ImageGetModel(System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, int @id, double? @scale, byte[] @voxelArray, string @voxelArrayFormat)
-            : base(id)
-        {
-            this.VoxelArray = @voxelArray;
-            this.Scale = @scale;
-            this.DimX = @dimX;
-            this.DimY = @dimY;
-            this.DimZ = @dimZ;
-            this.CreatedDate = @createdDate;
-            this.VoxelArrayFormat = @voxelArrayFormat;
-        }
-    
         [Newtonsoft.Json.JsonProperty("voxelArray", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] VoxelArray { get; }
+        public byte[] VoxelArray { get; set; }
     
         [Newtonsoft.Json.JsonProperty("scale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Scale { get; }
+        public double? Scale { get; set; }
     
         [Newtonsoft.Json.JsonProperty("dimX", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int DimX { get; }
+        public int DimX { get; set; }
     
         [Newtonsoft.Json.JsonProperty("dimY", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int DimY { get; }
+        public int DimY { get; set; }
     
         [Newtonsoft.Json.JsonProperty("dimZ", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int DimZ { get; }
+        public int DimZ { get; set; }
     
         [Newtonsoft.Json.JsonProperty("createdDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? CreatedDate { get; }
+        public System.DateTimeOffset? CreatedDate { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("polygonalModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PolygonalModelGetModel PolygonalModel { get; set; }
     
         [Newtonsoft.Json.JsonProperty("voxelArrayFormat", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string VoxelArrayFormat { get; }
+        public string VoxelArrayFormat { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
+    public partial class PolygonalModelGetModel 
+    {
+        [Newtonsoft.Json.JsonProperty("rockFaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public byte[] RockFaces { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("rockVertexes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public byte[] RockVertexes { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("porousFaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public byte[] PorousFaces { get; set; }
+    
+        [Newtonsoft.Json.JsonProperty("porousVertexes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public byte[] PorousVertexes { get; set; }
     
     
     }
@@ -3154,14 +3115,8 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class EntityGetModel 
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public EntityGetModel(int @id)
-        {
-            this.Id = @id;
-        }
-    
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
     
     }
@@ -3169,23 +3124,14 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class MicroCT : PorousStructuresImage
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public MicroCT(double? @avgElementSize, double? @cavernsVolume, double? @chanelsVolume, System.DateTimeOffset? @createdDate, double? @depth, int @dimX, int @dimY, int @dimZ, int? @elementsCount, System.Collections.Generic.ICollection<PGGAN> @generationNetwork, int @id, bool @isArchived, double? @maxElementSize, double? @minElementSize, string @name, double? @permeability, PolygonalModel @polygonalModel, double @porosity, double? @scale, byte[] @voxelArray, string @voxelArrayFormat, double? @сohesion)
-            : base(avgElementSize, cavernsVolume, chanelsVolume, createdDate, dimX, dimY, dimZ, elementsCount, id, isArchived, maxElementSize, minElementSize, permeability, polygonalModel, porosity, scale, voxelArray, voxelArrayFormat, сohesion)
-        {
-            this.Name = @name;
-            this.Depth = @depth;
-            this.GenerationNetwork = @generationNetwork;
-        }
-    
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Name { get; }
+        public string Name { get; set; }
     
         [Newtonsoft.Json.JsonProperty("depth", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Depth { get; }
+        public double? Depth { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generationNetwork", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<PGGAN> GenerationNetwork { get; }
+        public System.Collections.Generic.ICollection<PGGAN> GenerationNetwork { get; set; }
     
     
     }
@@ -3193,55 +3139,38 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PGGAN : NeuralNetwork
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PGGAN(bool @cashed, int @channels, ConvolutionalActivation @convolutionalActivations, System.DateTimeOffset? @createdDate, int @criticSteps, System.Collections.Generic.ICollection<GeneratedImage> @generatedImages, GeneratorOutputActivation @generatorOutputActivation, int @hiddenShape, int @id, int @imageScaleX, int @imageScaleY, int @imageScaleZ, bool @isArchived, MicroCT @microCT, byte[] @networkModel, Optimizer @optimizer, float? @reLUAlpha, NetworkType @type, string @weightInitializer)
-            : base(channels, createdDate, id, imageScaleX, imageScaleY, imageScaleZ, isArchived, networkModel)
-        {
-            this.GeneratedImages = @generatedImages;
-            this.MicroCT = @microCT;
-            this.Type = @type;
-            this.Optimizer = @optimizer;
-            this.WeightInitializer = @weightInitializer;
-            this.GeneratorOutputActivation = @generatorOutputActivation;
-            this.ConvolutionalActivations = @convolutionalActivations;
-            this.ReLUAlpha = @reLUAlpha;
-            this.HiddenShape = @hiddenShape;
-            this.CriticSteps = @criticSteps;
-            this.Cashed = @cashed;
-        }
-    
         [Newtonsoft.Json.JsonProperty("generatedImages", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<GeneratedImage> GeneratedImages { get; }
+        public System.Collections.Generic.ICollection<GeneratedImage> GeneratedImages { get; set; }
     
         [Newtonsoft.Json.JsonProperty("microCT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public MicroCT MicroCT { get; }
+        public MicroCT MicroCT { get; set; }
     
         [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public NetworkType Type { get; }
+        public NetworkType Type { get; set; }
     
         [Newtonsoft.Json.JsonProperty("optimizer", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Optimizer Optimizer { get; }
+        public Optimizer Optimizer { get; set; }
     
         [Newtonsoft.Json.JsonProperty("weightInitializer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WeightInitializer { get; }
+        public string WeightInitializer { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generatorOutputActivation", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public GeneratorOutputActivation GeneratorOutputActivation { get; }
+        public GeneratorOutputActivation GeneratorOutputActivation { get; set; }
     
         [Newtonsoft.Json.JsonProperty("convolutionalActivations", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ConvolutionalActivation ConvolutionalActivations { get; }
+        public ConvolutionalActivation ConvolutionalActivations { get; set; }
     
         [Newtonsoft.Json.JsonProperty("reLUAlpha", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float? ReLUAlpha { get; }
+        public float? ReLUAlpha { get; set; }
     
         [Newtonsoft.Json.JsonProperty("hiddenShape", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int HiddenShape { get; }
+        public int HiddenShape { get; set; }
     
         [Newtonsoft.Json.JsonProperty("criticSteps", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int CriticSteps { get; }
+        public int CriticSteps { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cashed", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Cashed { get; }
+        public bool Cashed { get; set; }
     
     
     }
@@ -3249,31 +3178,20 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class GeneratedImage : PorousStructuresImage
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public GeneratedImage(double? @avgElementSize, double? @cavernsVolume, double? @chanelsVolume, ControlVariables @controlVariables, System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, int? @elementsCount, PGGAN @generationNetwork, int @generationNetworkId, int @id, bool @isArchived, bool @isBinarized, double? @maxElementSize, double? @minElementSize, byte[] @noizeVector, double? @permeability, PolygonalModel @polygonalModel, double @porosity, double? @scale, byte[] @voxelArray, string @voxelArrayFormat, double? @сohesion)
-            : base(avgElementSize, cavernsVolume, chanelsVolume, createdDate, dimX, dimY, dimZ, elementsCount, id, isArchived, maxElementSize, minElementSize, permeability, polygonalModel, porosity, scale, voxelArray, voxelArrayFormat, сohesion)
-        {
-            this.IsBinarized = @isBinarized;
-            this.GenerationNetworkId = @generationNetworkId;
-            this.GenerationNetwork = @generationNetwork;
-            this.NoizeVector = @noizeVector;
-            this.ControlVariables = @controlVariables;
-        }
-    
         [Newtonsoft.Json.JsonProperty("isBinarized", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool IsBinarized { get; }
+        public bool IsBinarized { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generationNetworkId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int GenerationNetworkId { get; }
+        public int GenerationNetworkId { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generationNetwork", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGAN GenerationNetwork { get; }
+        public PGGAN GenerationNetwork { get; set; }
     
         [Newtonsoft.Json.JsonProperty("noizeVector", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] NoizeVector { get; }
+        public byte[] NoizeVector { get; set; }
     
         [Newtonsoft.Json.JsonProperty("controlVariables", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ControlVariables ControlVariables { get; }
+        public ControlVariables ControlVariables { get; set; }
     
     
     }
@@ -3281,75 +3199,50 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class ControlVariables : Entity
     {
-        public ControlVariables()
-        {
-
-        }
-        [Newtonsoft.Json.JsonConstructor]
-        public ControlVariables(double? @avgElementSize, bool @binarisation, double? @cavernsVolume, double? @chanelsVolume, bool @deleteNoize, double? @elementsCount, GeneratedImage @generatedImage, int @id, bool @isArchived, double? @maxElementSize, double? @minElementSize, System.Collections.Generic.ICollection<float> @noiseVector, double? @permeability, double? @porosity, int? @seed, double? @сohesion)
-            : base(id, isArchived)
-        {
-            //this.Id = @id;
-            this.GeneratedImage = @generatedImage;
-            this.NoiseVector = @noiseVector;
-            this.Porosity = @porosity;
-            this.ElementsCount = @elementsCount;
-            this.MinElementSize = @minElementSize;
-            this.MaxElementSize = @maxElementSize;
-            this.AvgElementSize = @avgElementSize;
-            this.Сohesion = @сohesion;
-            this.CavernsVolume = @cavernsVolume;
-            this.ChanelsVolume = @chanelsVolume;
-            this.Permeability = @permeability;
-            this.Binarisation = @binarisation;
-            this.DeleteNoize = @deleteNoize;
-            this.Seed = @seed;
-        }
-    
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generatedImage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public GeneratedImage GeneratedImage { get; }
+        public GeneratedImage GeneratedImage { get; set; }
     
         [Newtonsoft.Json.JsonProperty("noiseVector", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<float> NoiseVector { get; }
+        public System.Collections.Generic.ICollection<float> NoiseVector { get; set; }
     
         [Newtonsoft.Json.JsonProperty("porosity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Porosity { get; }
+        public double? Porosity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("elementsCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? ElementsCount { get; }
+        public double? ElementsCount { get; set; }
     
         [Newtonsoft.Json.JsonProperty("minElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MinElementSize { get; }
+        public double? MinElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("maxElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MaxElementSize { get; }
+        public double? MaxElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("avgElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? AvgElementSize { get; }
+        public double? AvgElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("сohesion", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Сohesion { get; }
+        public double? Сohesion { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cavernsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? CavernsVolume { get; }
+        public double? CavernsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("chanelsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? ChanelsVolume { get; }
+        public double? ChanelsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("permeability", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Permeability { get; }
+        public double? Permeability { get; set; }
     
         [Newtonsoft.Json.JsonProperty("binarisation", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Binarisation { get; }
+        public bool Binarisation { get; set; }
     
         [Newtonsoft.Json.JsonProperty("deleteNoize", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool DeleteNoize { get; }
+        public bool DeleteNoize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("seed", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? Seed { get; }
+        public int? Seed { get; set; }
     
     
     }
@@ -3357,22 +3250,11 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class Entity 
     {
-        public Entity()
-        {
-
-        }
-        [Newtonsoft.Json.JsonConstructor]
-        public Entity(int @id, bool @isArchived)
-        {
-            this.Id = @id;
-            this.IsArchived = @isArchived;
-        }
-    
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
         [Newtonsoft.Json.JsonProperty("isArchived", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool IsArchived { get; }
+        public bool IsArchived { get; set; }
     
     
     }
@@ -3380,47 +3262,32 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PorousStructuresImage : Image
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PorousStructuresImage(double? @avgElementSize, double? @cavernsVolume, double? @chanelsVolume, System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, int? @elementsCount, int @id, bool @isArchived, double? @maxElementSize, double? @minElementSize, double? @permeability, PolygonalModel @polygonalModel, double @porosity, double? @scale, byte[] @voxelArray, string @voxelArrayFormat, double? @сohesion)
-            : base(createdDate, dimX, dimY, dimZ, id, isArchived, polygonalModel, scale, voxelArray, voxelArrayFormat)
-        {
-            this.Porosity = @porosity;
-            this.ElementsCount = @elementsCount;
-            this.MinElementSize = @minElementSize;
-            this.MaxElementSize = @maxElementSize;
-            this.AvgElementSize = @avgElementSize;
-            this.Сohesion = @сohesion;
-            this.CavernsVolume = @cavernsVolume;
-            this.ChanelsVolume = @chanelsVolume;
-            this.Permeability = @permeability;
-        }
-    
         [Newtonsoft.Json.JsonProperty("porosity", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double Porosity { get; }
+        public double Porosity { get; set; }
     
         [Newtonsoft.Json.JsonProperty("elementsCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? ElementsCount { get; }
+        public int? ElementsCount { get; set; }
     
         [Newtonsoft.Json.JsonProperty("minElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MinElementSize { get; }
+        public double? MinElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("maxElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? MaxElementSize { get; }
+        public double? MaxElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("avgElementSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? AvgElementSize { get; }
+        public double? AvgElementSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("сohesion", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Сohesion { get; }
+        public double? Сohesion { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cavernsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? CavernsVolume { get; }
+        public double? CavernsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("chanelsVolume", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? ChanelsVolume { get; }
+        public double? ChanelsVolume { get; set; }
     
         [Newtonsoft.Json.JsonProperty("permeability", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Permeability { get; }
+        public double? Permeability { get; set; }
     
     
     }
@@ -3428,43 +3295,29 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class Image : Entity
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public Image(System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, int @id, bool @isArchived, PolygonalModel @polygonalModel, double? @scale, byte[] @voxelArray, string @voxelArrayFormat)
-            : base(id, isArchived)
-        {
-            this.VoxelArray = @voxelArray;
-            this.Scale = @scale;
-            this.DimX = @dimX;
-            this.DimY = @dimY;
-            this.DimZ = @dimZ;
-            this.CreatedDate = @createdDate;
-            this.PolygonalModel = @polygonalModel;
-            this.VoxelArrayFormat = @voxelArrayFormat;
-        }
-    
         [Newtonsoft.Json.JsonProperty("voxelArray", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] VoxelArray { get; }
+        public byte[] VoxelArray { get; set; }
     
         [Newtonsoft.Json.JsonProperty("scale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Scale { get; }
+        public double? Scale { get; set; }
     
         [Newtonsoft.Json.JsonProperty("dimX", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int DimX { get; }
+        public int DimX { get; set; }
     
         [Newtonsoft.Json.JsonProperty("dimY", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int DimY { get; }
+        public int DimY { get; set; }
     
         [Newtonsoft.Json.JsonProperty("dimZ", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int DimZ { get; }
+        public int DimZ { get; set; }
     
         [Newtonsoft.Json.JsonProperty("createdDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? CreatedDate { get; }
+        public System.DateTimeOffset? CreatedDate { get; set; }
     
         [Newtonsoft.Json.JsonProperty("polygonalModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PolygonalModel PolygonalModel { get; }
+        public PolygonalModel PolygonalModel { get; set; }
     
         [Newtonsoft.Json.JsonProperty("voxelArrayFormat", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string VoxelArrayFormat { get; }
+        public string VoxelArrayFormat { get; set; }
     
     
     }
@@ -3472,34 +3325,23 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PolygonalModel : Entity
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PolygonalModel(int @id, Image @image, bool @isArchived, byte[] @porousFaces, byte[] @porousVertexes, byte[] @rockFaces, byte[] @rockVertexes)
-            : base(id, isArchived)
-        {
-            this.RockFaces = @rockFaces;
-            this.RockVertexes = @rockVertexes;
-            this.PorousFaces = @porousFaces;
-            this.PorousVertexes = @porousVertexes;
-            this.Image = @image;
-        }
-    
         [Newtonsoft.Json.JsonProperty("rockFaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] RockFaces { get; }
+        public byte[] RockFaces { get; set; }
     
         [Newtonsoft.Json.JsonProperty("rockVertexes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] RockVertexes { get; }
+        public byte[] RockVertexes { get; set; }
     
         [Newtonsoft.Json.JsonProperty("porousFaces", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] PorousFaces { get; }
+        public byte[] PorousFaces { get; set; }
     
         [Newtonsoft.Json.JsonProperty("porousVertexes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] PorousVertexes { get; }
+        public byte[] PorousVertexes { get; set; }
     
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Image Image { get; }
+        public Image Image { get; set; }
     
     
     }
@@ -3553,35 +3395,23 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class NeuralNetwork : Entity
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public NeuralNetwork(int @channels, System.DateTimeOffset? @createdDate, int @id, int @imageScaleX, int @imageScaleY, int @imageScaleZ, bool @isArchived, byte[] @networkModel)
-            : base(id, isArchived)
-        {
-            this.ImageScaleX = @imageScaleX;
-            this.ImageScaleY = @imageScaleY;
-            this.ImageScaleZ = @imageScaleZ;
-            this.Channels = @channels;
-            this.NetworkModel = @networkModel;
-            this.CreatedDate = @createdDate;
-        }
-    
         [Newtonsoft.Json.JsonProperty("imageScaleX", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleX { get; }
+        public int ImageScaleX { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleY", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleY { get; }
+        public int ImageScaleY { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleZ", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleZ { get; }
+        public int ImageScaleZ { get; set; }
     
         [Newtonsoft.Json.JsonProperty("channels", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Channels { get; }
+        public int Channels { get; set; }
     
         [Newtonsoft.Json.JsonProperty("networkModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] NetworkModel { get; }
+        public byte[] NetworkModel { get; set; }
     
         [Newtonsoft.Json.JsonProperty("createdDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? CreatedDate { get; }
+        public System.DateTimeOffset? CreatedDate { get; set; }
     
     
     }
@@ -3589,51 +3419,35 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PGGANPostModel : NeuralNetworkPostModel
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PGGANPostModel(bool @cashed, int @channels, ConvolutionalActivation @convolutionalActivations, System.DateTimeOffset? @createdDate, int @criticSteps, GeneratorOutputActivation @generatorOutputActivation, int @hiddenShape, int @id, int @imageScaleX, int @imageScaleY, int @imageScaleZ, int @microCTId, string @networkModel, Optimizer @optimizer, float? @reLUAlpha, NetworkType @type, string @weightInitializer)
-            : base(channels, createdDate, id, imageScaleX, imageScaleY, imageScaleZ, networkModel)
-        {
-            this.MicroCTId = @microCTId;
-            this.Type = @type;
-            this.Optimizer = @optimizer;
-            this.WeightInitializer = @weightInitializer;
-            this.GeneratorOutputActivation = @generatorOutputActivation;
-            this.ConvolutionalActivations = @convolutionalActivations;
-            this.ReLUAlpha = @reLUAlpha;
-            this.HiddenShape = @hiddenShape;
-            this.CriticSteps = @criticSteps;
-            this.Cashed = @cashed;
-        }
-    
         [Newtonsoft.Json.JsonProperty("microCTId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int MicroCTId { get; }
+        public int MicroCTId { get; set; }
     
         [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public NetworkType Type { get; }
+        public NetworkType Type { get; set; }
     
         [Newtonsoft.Json.JsonProperty("optimizer", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Optimizer Optimizer { get; }
+        public Optimizer Optimizer { get; set; }
     
         [Newtonsoft.Json.JsonProperty("weightInitializer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WeightInitializer { get; }
+        public string WeightInitializer { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generatorOutputActivation", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public GeneratorOutputActivation GeneratorOutputActivation { get; }
+        public GeneratorOutputActivation GeneratorOutputActivation { get; set; }
     
         [Newtonsoft.Json.JsonProperty("convolutionalActivations", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ConvolutionalActivation ConvolutionalActivations { get; }
+        public ConvolutionalActivation ConvolutionalActivations { get; set; }
     
         [Newtonsoft.Json.JsonProperty("reLUAlpha", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float? ReLUAlpha { get; }
+        public float? ReLUAlpha { get; set; }
     
         [Newtonsoft.Json.JsonProperty("hiddenShape", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int HiddenShape { get; }
+        public int HiddenShape { get; set; }
     
         [Newtonsoft.Json.JsonProperty("criticSteps", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int CriticSteps { get; }
+        public int CriticSteps { get; set; }
     
         [Newtonsoft.Json.JsonProperty("cashed", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool Cashed { get; }
+        public bool Cashed { get; set; }
     
     
     }
@@ -3641,36 +3455,24 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class NeuralNetworkPostModel : EntityPostModel
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public NeuralNetworkPostModel(int @channels, System.DateTimeOffset? @createdDate, int @id, int @imageScaleX, int @imageScaleY, int @imageScaleZ, string @networkModel)
-            : base(id)
-        {
-            this.ImageScaleX = @imageScaleX;
-            this.ImageScaleY = @imageScaleY;
-            this.ImageScaleZ = @imageScaleZ;
-            this.Channels = @channels;
-            this.NetworkModel = @networkModel;
-            this.CreatedDate = @createdDate;
-        }
-    
         [Newtonsoft.Json.JsonProperty("imageScaleX", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleX { get; }
+        public int ImageScaleX { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleY", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleY { get; }
+        public int ImageScaleY { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleZ", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleZ { get; }
+        public int ImageScaleZ { get; set; }
     
         [Newtonsoft.Json.JsonProperty("channels", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Channels { get; }
+        public int Channels { get; set; }
     
         /// <summary>Base64 string format for data</summary>
         [Newtonsoft.Json.JsonProperty("networkModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string NetworkModel { get; }
+        public string NetworkModel { get; set; }
     
         [Newtonsoft.Json.JsonProperty("createdDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.DateTimeOffset? CreatedDate { get; }
+        public System.DateTimeOffset? CreatedDate { get; set; }
     
     
     }
@@ -3678,14 +3480,8 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class EntityPostModel 
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public EntityPostModel(int @id)
-        {
-            this.Id = @id;
-        }
-    
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
     
     }
@@ -3693,103 +3489,74 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PGGANResolution : Entity
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PGGANResolution(int @batchSize, byte[] @discriminatorWeights, int @fadeinBatchSize, int @fadeinLearningRateDecay, int @fadeinLearningRateEnd, int @fadeinLearningRateStart, int @fadeinUpsampleIterations, int @filtersCount, int @filtersPadding, int @filtersSize, int @filtersStride, PGGAN @generationNetwork, int @generationNetworkId, byte[] @generatorWeights, int @id, int @imageScaleX, int @imageScaleY, int @imageScaleZ, bool @isArchived, int @iterations, int @learningRateDecay, int @learningRateEnd, int @learningRateStart, PGGANTrainingResolutionStatus @pgganTrainingResolutionStatus, int @sampleInterval)
-            : base(id, isArchived)
-        {
-            this.GeneratorWeights = @generatorWeights;
-            this.DiscriminatorWeights = @discriminatorWeights;
-            this.ImageScaleX = @imageScaleX;
-            this.ImageScaleY = @imageScaleY;
-            this.ImageScaleZ = @imageScaleZ;
-            this.FiltersCount = @filtersCount;
-            this.FiltersSize = @filtersSize;
-            this.FiltersStride = @filtersStride;
-            this.FiltersPadding = @filtersPadding;
-            this.Iterations = @iterations;
-            this.BatchSize = @batchSize;
-            this.LearningRateStart = @learningRateStart;
-            this.LearningRateEnd = @learningRateEnd;
-            this.LearningRateDecay = @learningRateDecay;
-            this.FadeinUpsampleIterations = @fadeinUpsampleIterations;
-            this.FadeinBatchSize = @fadeinBatchSize;
-            this.FadeinLearningRateStart = @fadeinLearningRateStart;
-            this.FadeinLearningRateEnd = @fadeinLearningRateEnd;
-            this.FadeinLearningRateDecay = @fadeinLearningRateDecay;
-            this.GenerationNetworkId = @generationNetworkId;
-            this.GenerationNetwork = @generationNetwork;
-            this.PgganTrainingResolutionStatus = @pgganTrainingResolutionStatus;
-            this.SampleInterval = @sampleInterval;
-        }
-    
         [Newtonsoft.Json.JsonProperty("generatorWeights", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] GeneratorWeights { get; }
+        public byte[] GeneratorWeights { get; set; }
     
         [Newtonsoft.Json.JsonProperty("discriminatorWeights", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public byte[] DiscriminatorWeights { get; }
+        public byte[] DiscriminatorWeights { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleX", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleX { get; }
+        public int ImageScaleX { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleY", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleY { get; }
+        public int ImageScaleY { get; set; }
     
         [Newtonsoft.Json.JsonProperty("imageScaleZ", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int ImageScaleZ { get; }
+        public int ImageScaleZ { get; set; }
     
         [Newtonsoft.Json.JsonProperty("filtersCount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FiltersCount { get; }
+        public int FiltersCount { get; set; }
     
         [Newtonsoft.Json.JsonProperty("filtersSize", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FiltersSize { get; }
+        public int FiltersSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("filtersStride", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FiltersStride { get; }
+        public int FiltersStride { get; set; }
     
         [Newtonsoft.Json.JsonProperty("filtersPadding", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FiltersPadding { get; }
+        public int FiltersPadding { get; set; }
     
         [Newtonsoft.Json.JsonProperty("iterations", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Iterations { get; }
+        public int Iterations { get; set; }
     
         [Newtonsoft.Json.JsonProperty("batchSize", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int BatchSize { get; }
+        public int BatchSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("learningRateStart", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int LearningRateStart { get; }
+        public int LearningRateStart { get; set; }
     
         [Newtonsoft.Json.JsonProperty("learningRateEnd", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int LearningRateEnd { get; }
+        public int LearningRateEnd { get; set; }
     
         [Newtonsoft.Json.JsonProperty("learningRateDecay", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int LearningRateDecay { get; }
+        public int LearningRateDecay { get; set; }
     
         [Newtonsoft.Json.JsonProperty("fadeinUpsampleIterations", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FadeinUpsampleIterations { get; }
+        public int FadeinUpsampleIterations { get; set; }
     
         [Newtonsoft.Json.JsonProperty("fadeinBatchSize", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FadeinBatchSize { get; }
+        public int FadeinBatchSize { get; set; }
     
         [Newtonsoft.Json.JsonProperty("fadeinLearningRateStart", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FadeinLearningRateStart { get; }
+        public int FadeinLearningRateStart { get; set; }
     
         [Newtonsoft.Json.JsonProperty("fadeinLearningRateEnd", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FadeinLearningRateEnd { get; }
+        public int FadeinLearningRateEnd { get; set; }
     
         [Newtonsoft.Json.JsonProperty("fadeinLearningRateDecay", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FadeinLearningRateDecay { get; }
+        public int FadeinLearningRateDecay { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generationNetworkId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int GenerationNetworkId { get; }
+        public int GenerationNetworkId { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generationNetwork", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGAN GenerationNetwork { get; }
+        public PGGAN GenerationNetwork { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganTrainingResolutionStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGANTrainingResolutionStatus PgganTrainingResolutionStatus { get; }
+        public PGGANTrainingResolutionStatus PgganTrainingResolutionStatus { get; set; }
     
         [Newtonsoft.Json.JsonProperty("sampleInterval", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int SampleInterval { get; }
+        public int SampleInterval { get; set; }
     
     
     }
@@ -3797,34 +3564,23 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PGGANTrainingResolutionStatus : Entity
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PGGANTrainingResolutionStatus(int @fadeinUpsampleIterationsPassed, int @id, bool @isArchived, int @iterationsPassed, PGGANResolution @pgganResolution, System.Collections.Generic.ICollection<PGGANSample> @pgganSample, PGGANTraining @pgganTraining)
-            : base(id, isArchived)
-        {
-            this.PgganResolution = @pgganResolution;
-            this.IterationsPassed = @iterationsPassed;
-            this.FadeinUpsampleIterationsPassed = @fadeinUpsampleIterationsPassed;
-            this.PgganTraining = @pgganTraining;
-            this.PgganSample = @pgganSample;
-        }
-    
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganResolution", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGANResolution PgganResolution { get; }
+        public PGGANResolution PgganResolution { get; set; }
     
         [Newtonsoft.Json.JsonProperty("iterationsPassed", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int IterationsPassed { get; }
+        public int IterationsPassed { get; set; }
     
         [Newtonsoft.Json.JsonProperty("fadeinUpsampleIterationsPassed", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int FadeinUpsampleIterationsPassed { get; }
+        public int FadeinUpsampleIterationsPassed { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganTraining", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGANTraining PgganTraining { get; }
+        public PGGANTraining PgganTraining { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganSample", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<PGGANSample> PgganSample { get; }
+        public System.Collections.Generic.ICollection<PGGANSample> PgganSample { get; set; }
     
     
     }
@@ -3832,26 +3588,17 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PGGANTraining : Entity
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PGGANTraining(int @id, bool @isArchived, PGGAN @pggan, System.Collections.Generic.ICollection<PGGANTrainingResolutionStatus> @pgganTrainingResolutionsStatuses, TrainingStatus @trainingStatus)
-            : base(id, isArchived)
-        {
-            this.Pggan = @pggan;
-            this.PgganTrainingResolutionsStatuses = @pgganTrainingResolutionsStatuses;
-            this.TrainingStatus = @trainingStatus;
-        }
-    
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Id { get; }
+        public int Id { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pggan", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGAN Pggan { get; }
+        public PGGAN Pggan { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganTrainingResolutionsStatuses", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<PGGANTrainingResolutionStatus> PgganTrainingResolutionsStatuses { get; }
+        public System.Collections.Generic.ICollection<PGGANTrainingResolutionStatus> PgganTrainingResolutionsStatuses { get; set; }
     
         [Newtonsoft.Json.JsonProperty("trainingStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public TrainingStatus TrainingStatus { get; }
+        public TrainingStatus TrainingStatus { get; set; }
     
     
     }
@@ -3874,35 +3621,23 @@ namespace RockAnalysis
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.23.0 (Newtonsoft.Json v12.0.0.0)")]
     public partial class PGGANSample : GeneratedImage
     {
-        [Newtonsoft.Json.JsonConstructor]
-        public PGGANSample(double? @avgElementSize, double? @cavernsVolume, double? @chanelsVolume, ControlVariables @controlVariables, System.DateTimeOffset? @createdDate, int @dimX, int @dimY, int @dimZ, float? @discriminatorAccuracy, float @discriminatorLoss, int? @elementsCount, PGGAN @generationNetwork, int @generationNetworkId, float @generatorLoss, int @id, bool @isArchived, bool @isBinarized, int @iteration, double? @maxElementSize, double? @minElementSize, byte[] @noizeVector, double? @permeability, int @pgganResolutionTrainingStatusId, PGGANTrainingResolutionStatus @pgganTrainingResolutionStatus, PolygonalModel @polygonalModel, double @porosity, double? @scale, byte[] @voxelArray, string @voxelArrayFormat, double? @сohesion)
-            : base(avgElementSize, cavernsVolume, chanelsVolume, controlVariables, createdDate, dimX, dimY, dimZ, elementsCount, generationNetwork, generationNetworkId, id, isArchived, isBinarized, maxElementSize, minElementSize, noizeVector, permeability, polygonalModel, porosity, scale, voxelArray, voxelArrayFormat, сohesion)
-        {
-            this.Iteration = @iteration;
-            this.DiscriminatorAccuracy = @discriminatorAccuracy;
-            this.GeneratorLoss = @generatorLoss;
-            this.DiscriminatorLoss = @discriminatorLoss;
-            this.PgganResolutionTrainingStatusId = @pgganResolutionTrainingStatusId;
-            this.PgganTrainingResolutionStatus = @pgganTrainingResolutionStatus;
-        }
-    
         [Newtonsoft.Json.JsonProperty("iteration", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int Iteration { get; }
+        public int Iteration { get; set; }
     
         [Newtonsoft.Json.JsonProperty("discriminatorAccuracy", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float? DiscriminatorAccuracy { get; }
+        public float? DiscriminatorAccuracy { get; set; }
     
         [Newtonsoft.Json.JsonProperty("generatorLoss", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float GeneratorLoss { get; }
+        public float GeneratorLoss { get; set; }
     
         [Newtonsoft.Json.JsonProperty("discriminatorLoss", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public float DiscriminatorLoss { get; }
+        public float DiscriminatorLoss { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganResolutionTrainingStatusId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int PgganResolutionTrainingStatusId { get; }
+        public int PgganResolutionTrainingStatusId { get; set; }
     
         [Newtonsoft.Json.JsonProperty("pgganTrainingResolutionStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PGGANTrainingResolutionStatus PgganTrainingResolutionStatus { get; }
+        public PGGANTrainingResolutionStatus PgganTrainingResolutionStatus { get; set; }
     
     
     }

@@ -7,9 +7,9 @@ namespace ApiNetOpenApi.Models.Get
 {
     public class PolygonalModelGetModel
     {
-        public byte[] RockFaces { get; set; }
-        public byte[] RockVertexes { get; set; }
-        public byte[] PorousFaces { get; set; }
-        public byte[] PorousVertexes { get; set; }
+        public string RockFaces { get; set; }
+        //public byte[] RockVertexes { get; set; }
+        //public byte[] PorousFaces { get; set; }
+        //public byte[] PorousVertexes { get; set; }
     }
 }
