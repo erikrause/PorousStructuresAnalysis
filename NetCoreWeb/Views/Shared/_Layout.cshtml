@@ -47,12 +47,6 @@
     @RenderSection("Scripts", required: false)
     <script src="~/js/stl_viewer.min.js"></script>
     <script>
-        function dosomething(stl_string) {
-            stl = atob(stl_string)
-            
-        }
-
-
         var stl_viewer = new StlViewer(document.getElementById("stl_cont"), { models: [{ id: 0, filename: "porous.stl", load_three_files: "../../wwwroot/js" }] });
     </script>
 </body>
