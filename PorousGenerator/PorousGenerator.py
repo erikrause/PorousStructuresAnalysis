@@ -113,12 +113,26 @@ def predict_raw():
 
     prediction = predict(seed, porosity_request)
     raw_image = postprocessing.convert_to_raw(prediction)
-    raw_bytes = io.BytesIO(raw_image.tobytes())
-    raw_bytes.seek(0)
+    #raw_bytes = io.BytesIO(raw_image.tobytes())
+    #raw_bytes.seek(0)
 
-    response = flask.send_file(raw_bytes, attachment_filename="3D image.raw", as_attachment=True)
+    x = prediction.shape[0]
+    y = prediction.shape[1]
+    z = prediction.shape[2]
+    porosity = np.mean(prediction) / 255
 
-    return response
+    b1 = raw_image.tobytes()
+    b2 =  base64.b64encode(b1) 
+    data = { "VoxelArray" : b2.decode('ascii'),
+             "DimX" : x,
+             "DimY" : y,
+             "DimZ" : z,
+             "Porosity" : porosity
+        }
+    js = flask.json.dumps(data)
+    #response = flask.send_file(raw_bytes, attachment_filename="3D image.raw", as_attachment=True)
+
+    return flask.Response(js, status=200, mimetype='application/json')
 
 @app.route("/init_generator", methods=["POST"])
 def init_generator():

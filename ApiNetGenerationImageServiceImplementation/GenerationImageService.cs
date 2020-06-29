@@ -1,5 +1,6 @@
 ﻿using ApiNetGenerationImageServiceBase;
 using ApiNetPolygonalModelingServiceBase;
+using Newtonsoft.Json.Linq;
 using OpenApiSqlDomain.Entities;
 using OpenApiSqlDomain.Interfaces;
 using RestSharp;
@@ -37,13 +38,25 @@ namespace ApiNetGenerationImageServiceImplementation
 
             var client = new RestClient("http://127.0.0.1:5000/");
             var request = new RestRequest("predict/raw", Method.POST, DataFormat.Json);
-
             request.AddJsonBody(controlVariables);
-
             var response = client.Execute(request);
 
-            generatedImage.VoxelArray = response.RawBytes;
+            dynamic jObject = JObject.Parse(response.Content);
+            generatedImage.VoxelArray = jObject.VoxelArray;
+            generatedImage.DimX = jObject.DimX;
+            generatedImage.DimY = jObject.DimY;
+            generatedImage.DimZ = jObject.DimZ;
+            generatedImage.Porosity = jObject.Porosity;
+
             generatedImage.VoxelArrayFormat = "raw";
+
+            /*var imageProcessingClient = new RestClient("http://127.0.0.1:5002/");
+            var processingRequest = new RestRequest("computeMetadata", Method.POST, DataFormat.Json);
+            request.AddJsonBody(generatedImage);
+            var processingResponse = imageProcessingClient.Execute(processingRequest);
+            
+            var prob = processingResponse.Content;*/
+
 
             await _polygonalModelingService.ComputePolygons(generatedImage);
             await _repository.Create(generatedImage);
