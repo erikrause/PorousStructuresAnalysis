@@ -50,6 +50,7 @@ namespace NetCoreWeb.Controllers
 
                 GenerationImagesClient generationImagesClient = new GenerationImagesClient(new System.Net.Http.HttpClient());
                 GeneratedImageGetModel generatedImage =  await generationImagesClient.PostAsync(1, controlVariablesModel);
+                generatedImage.Porosity = generatedImage.Porosity * 100;
 
                 var stl_file = Convert.FromBase64String(generatedImage.PolygonalModel.RockFaces);
 

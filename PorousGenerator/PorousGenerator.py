@@ -120,6 +120,7 @@ def predict_raw():
     y = prediction.shape[1]
     z = prediction.shape[2]
     porosity = np.mean(prediction) / 255
+    porosity = 1 - porosity
 
     b1 = raw_image.tobytes()
     b2 =  base64.b64encode(b1) 
