@@ -35,6 +35,11 @@ namespace ApiNetOpenApi.Controllers
         }
 
         // GET: api/GenerationNetwork/5
+        /// <summary>
+        /// Получить модель нейронной сети
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async  Task<PGGAN> Get(int id)
         {
@@ -42,6 +47,11 @@ namespace ApiNetOpenApi.Controllers
         }
 
         // POST: api/GenerationNetwork
+        /// <summary>
+        /// Создать модель нейронной сети
+        /// </summary>
+        /// <param name="network"> Гиперпараметры нейронной сети </param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<int> Post([FromBody] PGGANPostModel network)
         {
@@ -67,6 +77,11 @@ namespace ApiNetOpenApi.Controllers
         }
 
         // PUT: api/GenerationNetwork/5
+        /// <summary>
+        /// Обновить существующую модель нейронной сети
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="network"> Гиперпараметры нейронной сети </param>
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] PGGANPostModel network)
         {
@@ -84,6 +99,10 @@ namespace ApiNetOpenApi.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
+        /// <summary>
+        /// Удалить существующую модель нейронной сети
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

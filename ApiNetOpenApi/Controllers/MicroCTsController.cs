@@ -17,6 +17,10 @@ namespace ApiNetOpenApi.Controllers
         readonly IMicroCTService _microCTService;
 
         // GET: api/MicroCT
+        /// <summary>
+        /// Получить все доступные микро-КТ
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<MicroCT> Get()
         {
@@ -24,6 +28,11 @@ namespace ApiNetOpenApi.Controllers
             return null;
         }
 
+        /// <summary>
+        /// Получить микро-КТ
+        /// </summary>
+        /// <param name="id"> Идентификатор микро-КТ</param>
+        /// <returns></returns>
         // GET: api/MicroCT/5
         [HttpGet("{id}")]
         public async Task<MicroCT> Get(int id)
@@ -32,11 +41,20 @@ namespace ApiNetOpenApi.Controllers
         }
 
         // POST: api/MicroCT
+        /// <summary>
+        /// Загрузить микро-КТ в систему
+        /// </summary>
+        /// <param name="microCT"></param>
         [HttpPost]
         public void Post([FromBody] MicroCT microCT)
         {
         }
 
+        /// <summary>
+        /// Обновить существующее микро-КТ
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="microCT"></param>
         // PUT: api/MicroCT/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] MicroCT microCT)
@@ -44,6 +62,10 @@ namespace ApiNetOpenApi.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
+        /// <summary>
+        /// Удалить существующее микро-КТ
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
